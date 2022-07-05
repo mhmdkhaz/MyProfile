@@ -1,0 +1,139 @@
+.setting{
+    position: relative;
+        .content-color{
+            position: absolute;
+            top: 50px;
+            right: 8%;
+            width: 300px;
+            .icon{
+                position: relative;
+                height: 100%;
+                i{
+                    position: absolute;
+                    left: 0;
+                    cursor: pointer;
+                    font-size: 20px;
+                    color: $beafname;
+                    animation: transformRotate 2s linear infinite;
+                    @include keyframes-animation(transformRotate) {
+                        0% {
+                          @include prefix-property(transform, rotate(0deg));
+                        }
+                        50%{
+                            @include prefix-property(transform, rotate(180deg));
+                        }
+                        100% {
+                          @include prefix-property(transform, rotate(360deg));
+                        }
+                      }
+                  }
+            }
+            .AllColor{
+              .textTheme{
+                h3{
+                    display: block;
+                    color: $text-black-700;
+                    font-size: $sizeH;
+                    font-weight: 500;
+                  }
+                }
+                  transition: 0.2s;
+                  background-color: $bg-black-100;
+                  width: 75% !important;
+                  border-radius: 5px;
+                  padding: $padingtp $padinglr - 20px;
+                .ShowColor{
+                  transition: all 0.5s;
+                  border-radius: 50%;
+                  width: 100%;
+                  height: $widhthightname;
+                  margin: 0 8px;
+                  cursor: pointer;
+                }
+            }
+        }
+  
+}
+.colorOne .ContentText h2 span{
+  color:$beafname;
+}
+.colorTow .ContentText h2 span{
+  color: $ColorOrange;
+}
+.colorThree .ContentText h2 span{
+  color: $ColorGreen;
+}
+.colorFour .ContentText h2 span {
+  color: $ColorBlue;
+}
+// bere images home
+.colorOne .ContentImg::before{
+  border-top: $borderFontimg solid $beafname;
+  border-right: $borderFontimg solid $beafname;
+}
+.colorTow .ContentImg::before{
+  border-top: $borderFontimg solid $ColorOrange;
+  border-right: $borderFontimg solid $ColorOrange;
+}
+.colorThree .ContentImg::before{
+  border-top: $borderFontimg solid $ColorGreen;
+  border-right: $borderFontimg solid $ColorGreen;
+}
+.colorFour .ContentImg::before {
+  border-top: $borderFontimg solid $ColorBlue;
+  border-right: $borderFontimg solid $ColorBlue;
+}
+// after mages home
+.colorOne .ContentImg::after{
+  border-bottom: $borderFontimg solid $beafname;
+  border-left: $borderFontimg solid $beafname;
+}
+.colorTow .ContentImg::after{
+  border-bottom: $borderFontimg solid $ColorOrange;
+  border-left: $borderFontimg solid $ColorOrange;
+}
+.colorThree .ContentImg::after{
+  border-bottom: $borderFontimg solid $ColorGreen;
+  border-left: $borderFontimg solid $ColorGreen;
+}
+.colorFour .ContentImg::after {
+  border-bottom: $borderFontimg solid $ColorBlue;
+  border-left: $borderFontimg solid $ColorBlue;
+}
+
+// name title before
+.colorOne .TextName .name::before{
+  border-top: $borderFontimg solid $beafname;
+  border-right: $borderFontimg solid $beafname;
+}
+.colorTow .TextName .name::before{
+  border-top: $borderFontimg solid $ColorOrange;
+  border-right: $borderFontimg solid $ColorOrange;
+}
+.colorThree .TextName .name::before{
+  border-top: $borderFontimg solid $ColorGreen;
+  border-right: $borderFontimg solid $ColorGreen;
+}
+.colorFour .TextName .name::before {
+  border-top: $borderFontimg solid $ColorBlue;
+  border-right: $borderFontimg solid $ColorBlue;
+}
+
+// name title after
+// after mages home
+.colorOne .TextName .name::after{
+  border-bottom: $borderFontimg solid $beafname;
+  border-left: $borderFontimg solid $beafname;
+}
+.colorTow .TextName .name::after{
+  border-bottom: $borderFontimg solid $ColorOrange;
+  border-left: $borderFontimg solid $ColorOrange;
+}
+.colorThree .TextName .name::after{
+  border-bottom: $borderFontimg solid $ColorGreen;
+  border-left: $borderFontimg solid $ColorGreen;
+}
+.colorFour .TextName .name::after {
+  border-bottom: $borderFontimg solid $ColorBlue;
+  border-left: $borderFontimg solid $ColorBlue;
+}

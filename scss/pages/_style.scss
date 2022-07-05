@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap');
+body{
+    font-family: 'Arima', cursive;
+    // start in aside and content aside
+    .mySidenav{
+        .content{
+            background-color: $bg-black-900;
+            height: 100vh;
+            .allaside{
+                height: 100vh;
+            .DefineMyself{
+                .ContentText{
+                    h2{
+                    font-size: $sizeH;
+                    width: 100%;
+                    span{
+                        font-family: 'Clicker Script', cursive;
+                        font-weight: 800;
+                        }
+                    }
+                    p{
+                        @include styleP;
+                    }
+                }
+            }
+                .ImgMyself{
+                    .ContentImg{
+                        position: relative;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: -10%;
+                            right: 0;
+                            width: $widhthightimg;
+                            height:$widhthightimg;
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            bottom: -10%;
+                            left: 0;
+                            width: $widhthightimg;
+                            height: $widhthightimg;
+                        }
+                        img{
+                            width: 80%;
+                            height: 100%;
+                            }
+                        }
+                    }
+                }
+                @media only screen and (max-width: $widhtmobile) {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                  }
+            }
+        }
+    }

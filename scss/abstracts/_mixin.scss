@@ -1,0 +1,20 @@
+@mixin styleP {
+    font-size: $sizeP;
+    letter-spacing: 2px;
+    color: $text-black-900;
+}
+
+// animatin setting
+@mixin keyframes-animation($name) {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    }
+  }
+  
+  @mixin prefix-property($name, $value) {
+    -webkit-#{$name}: $value;
+            #{$name}: $value;
+  }
