@@ -3,7 +3,7 @@
         .content-color{
             position: absolute;
             top: 50px;
-            right: 8%;
+            right: 10px;
             width: 300px;
             .icon{
                 position: relative;
@@ -52,7 +52,6 @@
                 }
             }
         }
-  
 }
 .colorOne .ContentText h2 span{
   color:$beafname;
@@ -149,5 +148,34 @@
   background-color: $ColorGreen;
 } 
 .colorFour .sidebar .list-group li::before{
+  background-color: $ColorBlue;
+} 
+
+// 
+.colorOne .OpenSidebar{
+  background-color: $beafname;
+} 
+.colorTow .OpenSidebar{
+  background-color: $ColorOrange;
+} 
+.colorThree .OpenSidebar{
+  background-color: $ColorGreen;
+} 
+.colorFour .OpenSidebar{
+  background-color: $ColorBlue;
+} 
+
+// start in open and close butoon sidebar
+
+.colorOne .OpenSidebar i{
+  background-color: $beafname;
+} 
+.colorTow .OpenSidebar i{
+  background-color: $ColorOrange;
+} 
+.colorThree .OpenSidebar i{
+  background-color: $ColorGreen;
+} 
+.colorFour .OpenSidebar i{
   background-color: $ColorBlue;
 } 

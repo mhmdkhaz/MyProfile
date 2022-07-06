@@ -1,0 +1,13 @@
+.OpenSidebar{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    i{
+        border-radius: $bRadiusTow;
+        padding: 8px;
+        color: $bg-black-100;
+        font-size:$sizeSp ;
+    }
+}

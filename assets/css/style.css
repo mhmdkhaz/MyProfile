@@ -10106,35 +10106,39 @@ textarea.form-control-lg {
 body {
   font-family: "Arima", cursive;
 }
-body .mySidenav .content {
+body .mySidenav {
   background-color: #f2f2fc;
-  height: 100vh;
 }
-body .mySidenav .content .allaside {
-  height: 100vh;
+body .mySidenav .content {
+  position: relative;
+  display: flex;
 }
-body .mySidenav .content .allaside .DefineMyself .ContentText .MyName span {
+body .mySidenav .content .ContentText .MyName span {
   font-family: "Clicker Script", cursive;
 }
-body .mySidenav .content .allaside .DefineMyself .ContentText h2 {
+body .mySidenav .content .ContentText h2 {
   font-size: 2rem;
   width: 100%;
 }
-body .mySidenav .content .allaside .DefineMyself .ContentText h2 span {
+body .mySidenav .content .ContentText h2 span {
   font-weight: 800;
   text-transform: capitalize;
 }
-body .mySidenav .content .allaside .DefineMyself .ContentText p {
+body .mySidenav .content .ContentText p {
   font-size: 1.2rem;
   letter-spacing: 2px;
   color: #302e70;
 }
-body .mySidenav .content .allaside .ImgMyself .ContentImg {
+@media only screen and (max-width: 720px) {
+  body .mySidenav .content .ContentText {
+    margin: 40px 0;
+  }
+}
+body .mySidenav .content .ImgMyself .ContentImg {
   position: relative;
-  height: 50%;
   width: 100%;
 }
-body .mySidenav .content .allaside .ImgMyself .ContentImg::before {
+body .mySidenav .content .ImgMyself .ContentImg::before {
   content: "";
   position: absolute;
   top: -10%;
@@ -10142,7 +10146,7 @@ body .mySidenav .content .allaside .ImgMyself .ContentImg::before {
   width: 70px;
   height: 70px;
 }
-body .mySidenav .content .allaside .ImgMyself .ContentImg::after {
+body .mySidenav .content .ImgMyself .ContentImg::after {
   content: "";
   position: absolute;
   bottom: -10%;
@@ -10150,34 +10154,58 @@ body .mySidenav .content .allaside .ImgMyself .ContentImg::after {
   width: 70px;
   height: 70px;
 }
-body .mySidenav .content .allaside .ImgMyself .ContentImg img {
+body .mySidenav .content .ImgMyself .ContentImg img {
   width: 60%;
   height: 100%;
 }
 @media only screen and (max-width: 720px) {
+  body .mySidenav .content .ImgMyself .ContentImg img {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 720px) {
   body .mySidenav .content {
-    display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
 }
+@media only screen and (max-width: 720px) {
+  body .mySidenav .content {
+    margin-bottom: 20px;
+  }
+}
 
-.btn {
+.about {
   border-radius: 40px;
   background-color: #ec1839;
   color: #f2f2fc;
   padding: 12px 35px;
   transition: all 0.2s;
 }
-.btn:hover {
+.about:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   color: #fdf9ff;
+}
+
+.OpenSidebar {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.OpenSidebar i {
+  border-radius: 5px;
+  padding: 8px;
+  color: #fdf9ff;
+  font-size: 1rem;
 }
 
 .sidebar {
   background-color: #fdf9ff;
   height: 100vh;
+  transition: 0.5s;
 }
 .sidebar .TextName {
   margin-bottom: 30%;
@@ -10263,6 +10291,10 @@ body .mySidenav .content .allaside .ImgMyself .ContentImg img {
     width: 0;
     height: 0;
     overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -10272,7 +10304,7 @@ body .mySidenav .content .allaside .ImgMyself .ContentImg img {
 .setting .content-color {
   position: absolute;
   top: 50px;
-  right: 8%;
+  right: 10px;
   width: 300px;
 }
 .setting .content-color .icon {
@@ -10446,6 +10478,38 @@ body .mySidenav .content .allaside .ImgMyself .ContentImg img {
 }
 
 .colorFour .sidebar .list-group li::before {
+  background-color: #1854b4;
+}
+
+.colorOne .OpenSidebar {
+  background-color: #ec1839;
+}
+
+.colorTow .OpenSidebar {
+  background-color: #fa5b0f;
+}
+
+.colorThree .OpenSidebar {
+  background-color: #37b182;
+}
+
+.colorFour .OpenSidebar {
+  background-color: #1854b4;
+}
+
+.colorOne .OpenSidebar i {
+  background-color: #ec1839;
+}
+
+.colorTow .OpenSidebar i {
+  background-color: #fa5b0f;
+}
+
+.colorThree .OpenSidebar i {
+  background-color: #37b182;
+}
+
+.colorFour .OpenSidebar i {
   background-color: #1854b4;
 }
 

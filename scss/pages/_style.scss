@@ -3,13 +3,9 @@ body{
     font-family: 'Arima', cursive;
     // start in aside and content aside
     .mySidenav{
+        background-color: $bg-black-900;
         .content{
-            background-color: $bg-black-900;
-            height: 100vh;
-            .allaside{
-                height: 100vh;
-            .DefineMyself{
-                
+            position: relative;
                 .ContentText{
                     .MyName{
                         span{
@@ -27,13 +23,13 @@ body{
                     p{
                         @include styleP;
                     }
+                    @media only screen and (max-width: $widhtmobile) {
+                        margin: $margintp 0;
+                      }
                 }
-            }
-                .ImgMyself{
-                    
-                    .ContentImg{
+            .ImgMyself{
+                .ContentImg{
                         position: relative;
-                        height: 50%;
                         width: 100%;
                         &::before{
                             content: "";
@@ -54,15 +50,20 @@ body{
                         img{
                             width: 60%;
                             height: 100%;
+                            @media only screen and (max-width: $widhtmobile) {
+                                width: 85%;
+                              }
                             }
                         }
                     }
-                }
-                @media only screen and (max-width: $widhtmobile) {
                     display: flex;
+                    @media only screen and (max-width: $widhtmobile) {
                     flex-direction: column;
                     text-align: center;
                     align-items: center;
+                  }
+                  @media only screen and (max-width: $widhtmobile) {
+                    margin-bottom: 20px;
                   }
             }
         }

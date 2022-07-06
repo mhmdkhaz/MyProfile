@@ -5,6 +5,15 @@ setting.onclick = () => {
   ShowColor.classList.toggle("AllColor");
 };
 
+// open and close sidebar
+let OpenSide = document.querySelector(".OpenSidebar");
+let Sidebar = document.querySelector(".sidebar");
+
+OpenSide.onclick = () => {
+  Sidebar.style.width = "100%";
+  Sidebar.style.height = "100%";
+};
+
 // chose theme color
 let change = document.querySelectorAll(".ChangeColor .ShowColor");
 let arr = [];
@@ -22,7 +31,7 @@ change.forEach((color) => {
 // auto write and remove text
 
 let PlaceWrite = document.querySelector(".AutoWrite");
-let Words = ["front end developer", "web developer"];
+let Words = ["front end", "web developer"];
 
 let i = 0,
   j = 0;
