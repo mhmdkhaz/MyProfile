@@ -10113,13 +10113,16 @@ body .mySidenav .content {
 body .mySidenav .content .allaside {
   height: 100vh;
 }
+body .mySidenav .content .allaside .DefineMyself .ContentText .MyName span {
+  font-family: "Clicker Script", cursive;
+}
 body .mySidenav .content .allaside .DefineMyself .ContentText h2 {
   font-size: 2rem;
   width: 100%;
 }
 body .mySidenav .content .allaside .DefineMyself .ContentText h2 span {
-  font-family: "Clicker Script", cursive;
   font-weight: 800;
+  text-transform: capitalize;
 }
 body .mySidenav .content .allaside .DefineMyself .ContentText p {
   font-size: 1.2rem;
@@ -10128,6 +10131,8 @@ body .mySidenav .content .allaside .DefineMyself .ContentText p {
 }
 body .mySidenav .content .allaside .ImgMyself .ContentImg {
   position: relative;
+  height: 50%;
+  width: 100%;
 }
 body .mySidenav .content .allaside .ImgMyself .ContentImg::before {
   content: "";
@@ -10146,7 +10151,7 @@ body .mySidenav .content .allaside .ImgMyself .ContentImg::after {
   height: 70px;
 }
 body .mySidenav .content .allaside .ImgMyself .ContentImg img {
-  width: 80%;
+  width: 60%;
   height: 100%;
 }
 @media only screen and (max-width: 720px) {
@@ -10222,7 +10227,6 @@ body .mySidenav .content .allaside .ImgMyself .ContentImg img {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #ec1839;
   animation: MoveList 2s ease infinite;
 }
 @keyframes MoveList {
@@ -10427,6 +10431,22 @@ body .mySidenav .content .allaside .ImgMyself .ContentImg img {
 .colorFour .TextName .name::after {
   border-bottom: 6px solid #1854b4;
   border-left: 6px solid #1854b4;
+}
+
+.colorOne .sidebar .list-group li::before {
+  background-color: #ec1839;
+}
+
+.colorTow .sidebar .list-group li::before {
+  background-color: #fa5b0f;
+}
+
+.colorThree .sidebar .list-group li::before {
+  background-color: #37b182;
+}
+
+.colorFour .sidebar .list-group li::before {
+  background-color: #1854b4;
 }
 
 /*# sourceMappingURL=style.css.map */

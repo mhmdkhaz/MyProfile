@@ -50,7 +50,6 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-color: $beafname;
                 animation: MoveList 2s ease  infinite ;
                 @keyframes MoveList {
                     0%   { left:0%; width: 12px;  height: 3px;}

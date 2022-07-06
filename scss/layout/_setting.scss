@@ -137,3 +137,17 @@
   border-bottom: $borderFontimg solid $ColorBlue;
   border-left: $borderFontimg solid $ColorBlue;
 }
+
+// list group before
+.colorOne .sidebar .list-group li::before{
+  background-color: $beafname;
+} 
+.colorTow .sidebar .list-group li::before{
+  background-color: $ColorOrange;
+} 
+.colorThree .sidebar .list-group li::before{
+  background-color: $ColorGreen;
+} 
+.colorFour .sidebar .list-group li::before{
+  background-color: $ColorBlue;
+} 
