@@ -1,70 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap');
-body{
-    font-family: 'Arima', cursive;
-    // start in aside and content aside
-    .mySidenav{
-        background-color: $bg-black-900;
-        .content{
-            position: relative;
-                .ContentText{
-                    .MyName{
-                        span{
-                        font-family: 'Clicker Script', cursive;
-                        }
-                    }
-                    h2{
-                    font-size: $sizeH;
-                    width: 100%;
-                    span{
-                        font-weight: 800;
-                        text-transform: capitalize
-                        }
-                    }
-                    p{
-                        @include styleP;
-                    }
-                    @media only screen and (max-width: $widhtmobile) {
-                        margin: $margintp 0;
-                      }
-                }
-            .ImgMyself{
-                .ContentImg{
-                        position: relative;
-                        width: 100%;
-                        &::before{
-                            content: "";
-                            position: absolute;
-                            top: -10%;
-                            right: 0;
-                            width: $widhthightimg;
-                            height:$widhthightimg;
-                        }
-                        &::after{
-                            content: "";
-                            position: absolute;
-                            bottom: -10%;
-                            left: 0;
-                            width: $widhthightimg;
-                            height: $widhthightimg;
-                        }
-                        img{
-                            width: 60%;
-                            height: 100%;
-                            @media only screen and (max-width: $widhtmobile) {
-                                width: 85%;
-                              }
-                            }
-                        }
-                    }
-                    display: flex;
-                    @media only screen and (max-width: $widhtmobile) {
-                    flex-direction: column;
-                    text-align: center;
-                    align-items: center;
-                  }
-                  @media only screen and (max-width: $widhtmobile) {
-                    margin-bottom: 20px;
-                  }
-            }
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap");
+
+// start in aside and content aside
+.mySidenav {
+  .content {
+    position: relative;
+    .ContentText {
+      .MyName {
+        span {
+          font-family: "Clicker Script", cursive;
         }
+      }
+      h2 {
+        font-size: $sizeH;
+        width: 100%;
+        span {
+          font-weight: 800;
+          text-transform: capitalize;
+        }
+      }
+      p {
+        @include styleP;
+      }
+      @media only screen and (max-width: $widhtmobile) {
+        margin: $margintp + 30px 0;
+      }
     }
+    .ImgMyself {
+      .ContentImg {
+        position: relative;
+        width: 100%;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -10%;
+          right: 0;
+          width: $widhthightimg;
+          height: $widhthightimg;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -10%;
+          left: 0;
+          width: $widhthightimg;
+          height: $widhthightimg;
+        }
+        img {
+          width: 60%;
+          height: 100%;
+          @media only screen and (max-width: $widhtmobile) {
+            width: 85%;
+          }
+        }
+      }
+    }
+    display: flex;
+    @media only screen and (max-width: $widhtmobile) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// ------------------- start in about me -------------------
+.mySidenav {
+  .ExplainAbout {
+    margin-top: 100px;
+    .MyJop {
+      @extend .MyName;
+    }
+  }
+  @media only screen and (max-width: $widhtmobile) {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+  }
+}

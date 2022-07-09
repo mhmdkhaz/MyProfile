@@ -1,32 +1,45 @@
 let setting = document.querySelector(".icontSetting");
-let ShowColor = document.querySelector("#AllColor");
-
-setting.onclick = () => {
-  ShowColor.classList.toggle("AllColor");
-};
-
-// open and close sidebar
-let OpenSide = document.querySelector(".OpenSidebar");
-let Sidebar = document.querySelector(".sidebar");
-
-OpenSide.onclick = () => {
-  Sidebar.style.width = "100%";
-  Sidebar.style.height = "100%";
-};
-
-// chose theme color
+let ShowColor = document.querySelector(".AllColor");
 let change = document.querySelectorAll(".ChangeColor .ShowColor");
 let arr = [];
 
-change.forEach((color) => {
-  arr.push(color.getAttribute("data-color"));
-
-  color.onclick = () => {
-    let getColor = color.getAttribute("data-color");
-    document.body.classList.remove(...arr);
-    document.body.classList.add(getColor);
+function SettingThemeColor() {
+  setting.onclick = () => {
+    ShowColor.classList.toggle("AllColor");
   };
-});
+
+  change.forEach((color) => {
+    arr.push(color.getAttribute("data-color"));
+
+    color.onclick = () => {
+      let getColor = color.getAttribute("data-color");
+      document.body.classList.remove(...arr);
+      document.body.classList.add(getColor);
+    };
+  });
+}
+SettingThemeColor();
+
+// open and close sidebar
+let OpenSide = document.querySelector("#OpenSidebar");
+let CloseSide = document.querySelector("#CloseSidebar");
+let Sidebar = document.querySelector(".sidebar");
+
+let Lists = document.querySelectorAll(".list-group li");
+let NameList = document.querySelector(".NameList");
+let IconList = document.querySelector(".IconList");
+
+function ChangeColorCloseOpenSidebar() {
+  OpenSide.onclick = () => {
+    Sidebar.style.width = "100%";
+    Sidebar.style.height = "100%";
+  };
+  CloseSide.onclick = () => {
+    Sidebar.style.height = "0";
+    console.log("ddd");
+  };
+}
+ChangeColorCloseOpenSidebar();
 
 // auto write and remove text
 

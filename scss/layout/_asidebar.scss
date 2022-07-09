@@ -1,79 +1,145 @@
-.sidebar{
-    background-color: $bg-black-100;
-    height: 100vh;
-    transition: 0.5s;
-    .TextName{
-        margin-bottom: 30%;
-        .name{
-            position: relative;
-            font-size: 1.2rem;
-            color: $text-black-900;
-            .font{
-                font-family: 'Clicker Script', cursive;
-                font-size: 3rem;
-                font-weight: 1000;
-            }
-            margin: 20px auto;
-            font-size: 30px;
-            &::before{
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 20%;
-                width: $widhthightname;
-                height: $widhthightname;
-            }
-            &::after{
-                content: "";
-                border-bottom: $borderFontname solid $beafname;
-                border-left: $borderFontname solid $beafname;
-                position: absolute;
-                bottom: 0;
-                left: 20%;
-                width: $widhthightname;
-                height: $widhthightname;
-            }
+.sidebar {
+  background-color: $bg-black-100;
+  height: 100vh;
+  transition: 0.5s;
+  position: relative;
+  .TextName {
+    margin-bottom: 30%;
+    .name {
+      position: relative;
+      font-size: 1.2rem;
+      color: $text-black-900;
+      .font {
+        font-family: "Clicker Script", cursive;
+        font-size: 3rem;
+        font-weight: 1000;
+      }
+      margin: 20px auto;
+      font-size: 30px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 20%;
+        width: $widhthightname;
+        height: $widhthightname;
+      }
+      &::after {
+        content: "";
+        border-bottom: $borderFontname solid $beafname;
+        border-left: $borderFontname solid $beafname;
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        width: $widhthightname;
+        height: $widhthightname;
+      }
     }
-   } 
-   .list{
-    .list-group{
-        li{
-            position: relative;
-            padding: 5px 15px;
-            list-style: none;
-            border-bottom: 1px solid $text-black-900;
-            &:hover::before{
-                display: block;
+  }
+  .list {
+    .list-group {
+      li {
+        position: relative;
+        padding: 5px 15px;
+        list-style: none;
+        border-bottom: 1px solid $text-black-900;
+        overflow: hidden;
+        transition: all 0.1s linear;
+        &:hover {
+          span {
+            position: absolute;
+
+            &:nth-child(1) {
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 3px;
+              animation: animate1 1s linear infinite;
             }
-            &::before{
-                content: "";
-                display: none;
-                position: absolute;
-                top: 0;
-                left: 0;
-                animation: MoveList 2s ease  infinite ;
-                @keyframes MoveList {
-                    0%   { left:0%; width: 12px;  height: 3px;}
-                    50%  { left:100%;  width: 12px;  height: 3px;}
-                    100% { left:0; width: 12px;  height: 3px;}
-                  }
+            @keyframes animate1 {
+              0% {
+                left: -100%;
+              }
+              50%,
+              100% {
+                left: 100%;
+              }
             }
-            i{
-                color: $text-black-700; 
-                transition: all .8s;
+
+            &:nth-child(2) {
+              top: -100%;
+              right: 0;
+              width: 3px;
+              height: 100%;
+              animation: animate2 1s linear infinite;
+              animation-delay: 0.25s;
             }
-            a{
-                text-transform:capitalize;
-                text-decoration: none;
-                margin-left: 25px;
-                text-align: start;
-                color: $text-black-700;
-                transition: all .1s;
+
+            @keyframes animate2 {
+              0% {
+                top: -100%;
+              }
+              50%,
+              100% {
+                top: 100%;
+              }
             }
+            &:nth-child(3) {
+              bottom: 0;
+              right: 0;
+              width: 100%;
+
+              animation: animate3 1s linear infinite;
+              animation-delay: 0.5s;
+            }
+            @keyframes animate3 {
+              0% {
+                right: -100%;
+                height: 3px;
+              }
+              50%,
+              100% {
+                height: 2px;
+                right: 100%;
+              }
+            }
+
+            &:nth-child(4) {
+              bottom: -100%;
+              left: 0;
+              width: 3px;
+              height: 100%;
+              animation: animate4 1s linear infinite;
+              animation-delay: 0.75s;
+            }
+            @keyframes animate4 {
+              0% {
+                bottom: -100%;
+              }
+              50%,
+              100% {
+                bottom: 100%;
+              }
+            }
+          }
         }
+
+        i {
+          transition: all 0.8s;
+          color: $text-black-700;
+        }
+        a {
+          text-transform: capitalize;
+          text-decoration: none;
+          margin-left: 25px;
+          text-align: start;
+          transition: all 0.1s;
+          color: $text-black-700;
+        }
+      }
     }
-   }
-   @media only screen and (max-width: $widhtmobile) {
+  }
+  @media only screen and (max-width: $widhtmobile) {
     width: 0;
     height: 0;
     overflow: hidden;

@@ -1,181 +1,389 @@
-.setting{
-    position: relative;
-        .content-color{
-            position: absolute;
-            top: 50px;
-            right: 10px;
-            width: 300px;
-            .icon{
-                position: relative;
-                height: 100%;
-                i{
-                    position: absolute;
-                    left: 0;
-                    cursor: pointer;
-                    font-size: 20px;
-                    color: $beafname;
-                    animation: transformRotate 2s linear infinite;
-                    @include keyframes-animation(transformRotate) {
-                        0% {
-                          @include prefix-property(transform, rotate(0deg));
-                        }
-                        50%{
-                            @include prefix-property(transform, rotate(180deg));
-                        }
-                        100% {
-                          @include prefix-property(transform, rotate(360deg));
-                        }
-                      }
-                  }
-            }
-            .AllColor{
-              .textTheme{
-                h3{
-                    display: block;
-                    color: $text-black-700;
-                    font-size: $sizeH;
-                    font-weight: 500;
-                  }
-                }
-                  transition: 0.2s;
-                  background-color: $bg-black-100;
-                  width: 75% !important;
-                  border-radius: 5px;
-                  padding: $padingtp $padinglr - 20px;
-                .ShowColor{
-                  transition: all 0.5s;
-                  border-radius: 50%;
-                  width: 100%;
-                  height: $widhthightname;
-                  margin: 0 8px;
-                  cursor: pointer;
-                }
-            }
+.setting {
+  position: relative;
+  .ContentIconColor {
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    right: 0;
+    width: 100vw;
+    .icon {
+      height: 100%;
+      i {
+        margin-top: 50%;
+        cursor: pointer;
+        font-size: 20px;
+        color: $beafname;
+        animation: transformRotate 2s linear infinite;
+        @include keyframes-animation(transformRotate) {
+          0% {
+            @include prefix-property(transform, rotate(0deg));
+          }
+          50% {
+            @include prefix-property(transform, rotate(180deg));
+          }
+          100% {
+            @include prefix-property(transform, rotate(360deg));
+          }
         }
-}
-.colorOne .ContentText h2 span{
-  color:$beafname;
-}
-.colorTow .ContentText h2 span{
-  color: $ColorOrange;
-}
-.colorThree .ContentText h2 span{
-  color: $ColorGreen;
-}
-.colorFour .ContentText h2 span {
-  color: $ColorBlue;
-}
-// bere images home
-.colorOne .ContentImg::before{
-  border-top: $borderFontimg solid $beafname;
-  border-right: $borderFontimg solid $beafname;
-}
-.colorTow .ContentImg::before{
-  border-top: $borderFontimg solid $ColorOrange;
-  border-right: $borderFontimg solid $ColorOrange;
-}
-.colorThree .ContentImg::before{
-  border-top: $borderFontimg solid $ColorGreen;
-  border-right: $borderFontimg solid $ColorGreen;
-}
-.colorFour .ContentImg::before {
-  border-top: $borderFontimg solid $ColorBlue;
-  border-right: $borderFontimg solid $ColorBlue;
-}
-// after mages home
-.colorOne .ContentImg::after{
-  border-bottom: $borderFontimg solid $beafname;
-  border-left: $borderFontimg solid $beafname;
-}
-.colorTow .ContentImg::after{
-  border-bottom: $borderFontimg solid $ColorOrange;
-  border-left: $borderFontimg solid $ColorOrange;
-}
-.colorThree .ContentImg::after{
-  border-bottom: $borderFontimg solid $ColorGreen;
-  border-left: $borderFontimg solid $ColorGreen;
-}
-.colorFour .ContentImg::after {
-  border-bottom: $borderFontimg solid $ColorBlue;
-  border-left: $borderFontimg solid $ColorBlue;
+      }
+    }
+    .AllColor {
+      opacity: 0;
+    }
+    .content-color {
+      width: 40vh;
+      transition: 0.2s;
+      background-color: $bg-black-100;
+      border-radius: 5px;
+      padding: $padingtp $padinglr - 20px;
+      .textTheme {
+        h3 {
+          display: block;
+          color: $text-black-700;
+          font-size: $sizeH;
+          font-weight: 500;
+        }
+      }
+      .ShowColor {
+        transition: all 0.5s;
+        border-radius: $bRadiusTow;
+        width: 100%;
+        height: $widhthightname;
+        margin: 0 8px;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
-// name title before
-.colorOne .TextName .name::before{
-  border-top: $borderFontimg solid $beafname;
-  border-right: $borderFontimg solid $beafname;
-}
-.colorTow .TextName .name::before{
-  border-top: $borderFontimg solid $ColorOrange;
-  border-right: $borderFontimg solid $ColorOrange;
-}
-.colorThree .TextName .name::before{
-  border-top: $borderFontimg solid $ColorGreen;
-  border-right: $borderFontimg solid $ColorGreen;
-}
-.colorFour .TextName .name::before {
-  border-top: $borderFontimg solid $ColorBlue;
-  border-right: $borderFontimg solid $ColorBlue;
+// --------------- color red -----------------
+.colorOne {
+  // color name and jop
+  .ContentText {
+    h2 {
+      span {
+        color: $beafname;
+      }
+    }
+    .about {
+      background-color: $beafname;
+    }
+  }
+  // border before and after img
+  .ContentImg {
+    &::before {
+      border-top: $borderFontimg solid $beafname;
+      border-right: $borderFontimg solid $beafname;
+    }
+    &::after {
+      border-bottom: $borderFontimg solid $beafname;
+      border-left: $borderFontimg solid $beafname;
+    }
+  }
+  // name wesite in border after and before
+  .TextName {
+    .name {
+      &::before {
+        border-top: $borderFontimg solid $beafname;
+        border-right: $borderFontimg solid $beafname;
+      }
+      &::after {
+        border-bottom: $borderFontimg solid $beafname;
+        border-left: $borderFontimg solid $beafname;
+      }
+    }
+  }
+  // color animation list
+  .sidebar {
+    #CloseSidebar {
+      i {
+        background-color: $beafname;
+      }
+    }
+    .list-group {
+      li {
+        .active {
+          color: $beafname;
+        }
+        &::before {
+          background-color: $beafname;
+        }
+        span {
+          background-color: $beafname;
+        }
+      }
+    }
+  }
+  //
+  #OpenSidebar {
+    background-color: $beafname;
+    i {
+      background-color: $beafname;
+    }
+  }
+  //
+  .ExplainAbout {
+    .MainTitle {
+      &::before {
+        background-color: $beafname;
+      }
+      &::after {
+        background-color: $beafname;
+      }
+    }
+    .MyJop {
+      span {
+        color: $beafname;
+      }
+    }
+  }
 }
 
-// name title after
-// after mages home
-.colorOne .TextName .name::after{
-  border-bottom: $borderFontimg solid $beafname;
-  border-left: $borderFontimg solid $beafname;
-}
-.colorTow .TextName .name::after{
-  border-bottom: $borderFontimg solid $ColorOrange;
-  border-left: $borderFontimg solid $ColorOrange;
-}
-.colorThree .TextName .name::after{
-  border-bottom: $borderFontimg solid $ColorGreen;
-  border-left: $borderFontimg solid $ColorGreen;
-}
-.colorFour .TextName .name::after {
-  border-bottom: $borderFontimg solid $ColorBlue;
-  border-left: $borderFontimg solid $ColorBlue;
+//------------------ color orange -----------------
+.colorTow {
+  // color name and jop
+  .ContentText {
+    h2 {
+      span {
+        color: $ColorOrange;
+      }
+    }
+    .about {
+      background-color: $ColorOrange;
+    }
+  }
+  // border before and after img
+  .ContentImg {
+    &::before {
+      border-top: $borderFontimg solid $ColorOrange;
+      border-right: $borderFontimg solid $ColorOrange;
+    }
+    &::after {
+      border-bottom: $borderFontimg solid $ColorOrange;
+      border-left: $borderFontimg solid $ColorOrange;
+    }
+  }
+  // name wesite in border after and before
+  .TextName {
+    .name {
+      &::before {
+        border-top: $borderFontimg solid $ColorOrange;
+        border-right: $borderFontimg solid $ColorOrange;
+      }
+      &::after {
+        border-bottom: $borderFontimg solid $ColorOrange;
+        border-left: $borderFontimg solid $ColorOrange;
+      }
+    }
+  }
+  // color animation list
+  .sidebar {
+    #CloseSidebar {
+      i {
+        background-color: $ColorOrange;
+      }
+    }
+    .list-group {
+      li {
+        .active {
+          color: $ColorOrange;
+        }
+        &::before {
+          background-color: $ColorOrange;
+        }
+        span {
+          background-color: $ColorOrange;
+        }
+      }
+    }
+  }
+  //
+  #OpenSidebar {
+    background-color: $ColorOrange;
+    i {
+      background-color: $ColorOrange;
+    }
+  }
+  //
+  .ExplainAbout {
+    .MainTitle {
+      &::before {
+        background-color: $ColorOrange;
+      }
+      &::after {
+        background-color: $ColorOrange;
+      }
+    }
+    .MyJop {
+      span {
+        color: $ColorOrange;
+      }
+    }
+  }
 }
 
-// list group before
-.colorOne .sidebar .list-group li::before{
-  background-color: $beafname;
-} 
-.colorTow .sidebar .list-group li::before{
-  background-color: $ColorOrange;
-} 
-.colorThree .sidebar .list-group li::before{
-  background-color: $ColorGreen;
-} 
-.colorFour .sidebar .list-group li::before{
-  background-color: $ColorBlue;
-} 
+//---------------------- color three ----------------------
+.colorThree {
+  // color name and jop
+  .ContentText {
+    h2 {
+      span {
+        color: $ColorGreen;
+      }
+    }
+    .about {
+      background-color: $ColorGreen;
+    }
+  }
+  // border before and after img
+  .ContentImg {
+    &::before {
+      border-top: $borderFontimg solid $ColorGreen;
+      border-right: $borderFontimg solid $ColorGreen;
+    }
+    &::after {
+      border-bottom: $borderFontimg solid $ColorGreen;
+      border-left: $borderFontimg solid $ColorGreen;
+    }
+  }
+  // name wesite in border after and before
+  .TextName {
+    .name {
+      &::before {
+        border-top: $borderFontimg solid $ColorGreen;
+        border-right: $borderFontimg solid $ColorGreen;
+      }
+      &::after {
+        border-bottom: $borderFontimg solid $ColorGreen;
+        border-left: $borderFontimg solid $ColorGreen;
+      }
+    }
+  }
+  // color animation list
+  .sidebar {
+    #CloseSidebar {
+      i {
+        background-color: $ColorGreen;
+      }
+    }
+    .list-group {
+      li {
+        .active {
+          color: $ColorGreen;
+        }
+        &::before {
+          background-color: $ColorGreen;
+        }
+        span {
+          background-color: $ColorGreen;
+        }
+      }
+    }
+  }
+  //
+  #OpenSidebar {
+    background-color: $ColorGreen;
+    i {
+      background-color: $ColorGreen;
+    }
+  }
+  //
+  .ExplainAbout {
+    .MainTitle {
+      &::before {
+        background-color: $ColorGreen;
+      }
+      &::after {
+        background-color: $ColorGreen;
+      }
+    }
+    .MyJop {
+      span {
+        color: $ColorGreen;
+      }
+    }
+  }
+}
 
-// 
-.colorOne .OpenSidebar{
-  background-color: $beafname;
-} 
-.colorTow .OpenSidebar{
-  background-color: $ColorOrange;
-} 
-.colorThree .OpenSidebar{
-  background-color: $ColorGreen;
-} 
-.colorFour .OpenSidebar{
-  background-color: $ColorBlue;
-} 
-
-// start in open and close butoon sidebar
-
-.colorOne .OpenSidebar i{
-  background-color: $beafname;
-} 
-.colorTow .OpenSidebar i{
-  background-color: $ColorOrange;
-} 
-.colorThree .OpenSidebar i{
-  background-color: $ColorGreen;
-} 
-.colorFour .OpenSidebar i{
-  background-color: $ColorBlue;
-} 
+//------------------ color blue ------------------
+.colorFour {
+  // color name and jop
+  .ContentText {
+    h2 {
+      span {
+        color: $ColorBlue;
+      }
+    }
+    .about {
+      background-color: $ColorBlue;
+    }
+  }
+  // border before and after img
+  .ContentImg {
+    &::before {
+      border-top: $borderFontimg solid $ColorBlue;
+      border-right: $borderFontimg solid $ColorBlue;
+    }
+    &::after {
+      border-bottom: $borderFontimg solid $ColorBlue;
+      border-left: $borderFontimg solid $ColorBlue;
+    }
+  }
+  // name wesite in border after and before
+  .TextName {
+    .name {
+      &::before {
+        border-top: $borderFontimg solid $ColorBlue;
+        border-right: $borderFontimg solid $ColorBlue;
+      }
+      &::after {
+        border-bottom: $borderFontimg solid $ColorBlue;
+        border-left: $borderFontimg solid $ColorBlue;
+      }
+    }
+  }
+  // color animation list
+  .sidebar {
+    #CloseSidebar {
+      i {
+        background-color: $ColorBlue;
+      }
+    }
+    .list-group {
+      li {
+        .active {
+          color: $ColorBlue;
+        }
+        &::before {
+          background-color: $ColorBlue;
+        }
+        span {
+          background-color: $ColorBlue;
+        }
+      }
+    }
+  }
+  //
+  #OpenSidebar {
+    background-color: $ColorBlue;
+    i {
+      background-color: $ColorBlue;
+    }
+  }
+  //
+  .ExplainAbout {
+    .MainTitle {
+      &::before {
+        background-color: $ColorBlue;
+      }
+      &::after {
+        background-color: $ColorBlue;
+      }
+    }
+    .MyJop {
+      span {
+        color: $ColorBlue;
+      }
+    }
+  }
+}

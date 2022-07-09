@@ -1,19 +1,16 @@
-@use 'custom';
-//abstracts 
-@import "abstracts/variables",
-        "abstracts/mixin";
+@use "custom";
+//abstracts
+@import "abstracts/variables", "abstracts/mixin";
 // Pages
 @import "pages/style";
+@import "pages/glopal";
 
 //Components
-@import "components/buttons",
-        "components/OpenCloseSidebar";
+@import "components/buttons", "components/OpenCloseSidebar",
+  "components/MainTile";
 
 // Layouts
-@import "layout/asidebar",
-        "layout/setting";
+@import "layout/asidebar", "layout/setting";
 
 // base
-@import "base/typography",
-        "base/common",
-        "base/animation";
+@import "base/typography", "base/common", "base/animation";

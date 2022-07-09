@@ -1,0 +1,23 @@
+.MainTitle {
+  text-transform: capitalize;
+  color: $text-black-900;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: $beafname;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: $beafname;
+  }
+}
