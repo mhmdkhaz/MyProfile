@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap"); /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10107,14 +10108,14 @@ textarea.form-control-lg {
   position: relative;
   display: flex;
 }
-.mySidenav .content .ContentText .MyName span, .mySidenav .content .ContentText .ExplainAbout .MyJop span, .mySidenav .ExplainAbout .content .ContentText .MyJop span {
+.mySidenav .content .ContentText .MyName span {
   font-family: "Clicker Script", cursive;
 }
-.mySidenav .content .ContentText h2 {
+.mySidenav .content .ContentText .TextWeb {
   font-size: 2rem;
   width: 100%;
 }
-.mySidenav .content .ContentText h2 span {
+.mySidenav .content .ContentText .TextWeb span {
   font-weight: 800;
   text-transform: capitalize;
 }
@@ -10169,22 +10170,50 @@ textarea.form-control-lg {
 .mySidenav .ExplainAbout {
   margin-top: 100px;
 }
-body {
-  font-family: "Arima", cursive;
+.mySidenav .ExplainAbout p {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #302e70;
 }
-
-.mySidenav {
-  background-color: #f2f2fc;
-  height: 100vh;
+.mySidenav .InformationSkill {
+  margin-top: 40px;
+}
+.mySidenav .InformationSkill .Information {
+  margin-bottom: 40px;
+}
+.mySidenav .InformationSkill .Information h4 {
+  font-weight: 1200;
+  color: #302e70;
+  border-bottom: 1px solid #504e70;
+  padding: 12px;
+  text-transform: capitalize;
+}
+.mySidenav .InformationSkill .Information h4 span {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #504e70;
+}
+@media only screen and (max-width: 720px) {
+  .mySidenav .InformationSkill .Information h4 {
+    text-align: center;
+  }
+}
+.mySidenav .InformationSkill .Information .group-button {
+  margin-top: 40px;
+  padding: 10px;
+}
+.mySidenav .InformationSkill .Information .group-button button {
+  margin-left: 10px;
 }
 
 .ButtonStyle {
-  border-radius: 40px;
+  border-radius: 20px;
   background-color: #ec1839;
   color: #f2f2fc;
   padding: 12px 35px;
   transition: all 0.3s;
   position: relative;
+  width: 150px;
 }
 .ButtonStyle:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -10221,13 +10250,14 @@ body {
   text-transform: capitalize;
   color: #302e70;
   position: relative;
+  margin-bottom: 40px;
 }
 .MainTitle::before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50px;
+  width: 60px;
   height: 3px;
   background-color: #ec1839;
 }
@@ -10241,9 +10271,178 @@ body {
   background-color: #ec1839;
 }
 
+.progress-pie-chart {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+  position: relative;
+  margin: 0 0 40px 40px;
+}
+.progress-pie-chart.gt-50 {
+  position: relative;
+  background-color: #504e70;
+}
+.progress-pie-chart p {
+  position: absolute;
+  top: 100%;
+  text-align: center;
+  width: 100%;
+  text-transform: capitalize;
+  color: #302e70;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.ppc-progress {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  clip: rect(0, 100px, 100px, 50px);
+}
+.ppc-progress .ppc-progress-fill {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  clip: rect(0, 50px, 100px, 0);
+  background: #504e70;
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+.gt-50 .ppc-progress {
+  clip: rect(0, 50px, 100px, 0);
+}
+.gt-50 .ppc-progress .ppc-progress-fill {
+  clip: rect(0, 100px, 100px, 50px);
+  background: #e5e5e5;
+}
+
+.ppc-percents {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 86.9565217391px/2);
+  top: calc(50% - 86.9565217391px/2);
+  width: 86.9565217391px;
+  height: 86.9565217391px;
+  background: #fff;
+  text-align: center;
+  display: table;
+}
+.ppc-percents span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #302e70;
+}
+
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#load {
+  background-color: #504e70;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  overflow: visible;
+  user-select: none;
+  cursor: default;
+  display: none;
+}
+#load div {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 36px;
+  opacity: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 0px 3px 0px #504e70, 0px 14px 10px rgba(253, 249, 255, 0.15), 0px 24px 2px rgba(253, 249, 255, 0.1), 0px 34px 30px rgba(253, 249, 255, 0.1);
+  font-family: Helvetica, Arial, sans-serif;
+  animation: move 2s linear infinite;
+  transform: rotate(180deg);
+  color: #fdf9ff;
+}
+#load div:nth-child(2) {
+  animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+#load div:nth-child(3) {
+  animation-delay: 0.4s;
+  -o-animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+#load div:nth-child(4) {
+  animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+#load div:nth-child(5) {
+  animation-delay: 0.8s;
+  -o-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+}
+#load div:nth-child(6) {
+  animation-delay: 1s;
+  -o-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+#load div:nth-child(7) {
+  animation-delay: 1.2s;
+  -o-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+}
+@keyframes move {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  35% {
+    left: 41%;
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  65% {
+    left: 59%;
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+}
+
 .sidebar {
   background-color: #fdf9ff;
-  height: 100vh;
   transition: 0.5s;
   position: relative;
 }
@@ -10455,9 +10654,6 @@ body {
 .colorOne .ContentText h2 span {
   color: #ec1839;
 }
-.colorOne .ContentText .about {
-  background-color: #ec1839;
-}
 .colorOne .ContentImg::before {
   border-top: 6px solid #ec1839;
   border-right: 6px solid #ec1839;
@@ -10501,12 +10697,15 @@ body {
 .colorOne .ExplainAbout .MyJop span {
   color: #ec1839;
 }
+.colorOne .InformationSkill .progrees-line span {
+  background-color: #ec1839;
+}
+.colorOne .ButtonStyle {
+  background-color: #ec1839;
+}
 
 .colorTow .ContentText h2 span {
   color: #fa5b0f;
-}
-.colorTow .ContentText .about {
-  background-color: #fa5b0f;
 }
 .colorTow .ContentImg::before {
   border-top: 6px solid #fa5b0f;
@@ -10551,12 +10750,15 @@ body {
 .colorTow .ExplainAbout .MyJop span {
   color: #fa5b0f;
 }
+.colorTow .InformationSkill .progrees-line span {
+  background-color: #fa5b0f;
+}
+.colorTow .ButtonStyle {
+  background-color: #fa5b0f;
+}
 
 .colorThree .ContentText h2 span {
   color: #37b182;
-}
-.colorThree .ContentText .about {
-  background-color: #37b182;
 }
 .colorThree .ContentImg::before {
   border-top: 6px solid #37b182;
@@ -10601,12 +10803,15 @@ body {
 .colorThree .ExplainAbout .MyJop span {
   color: #37b182;
 }
+.colorThree .InformationSkill .progrees-line span {
+  background-color: #37b182;
+}
+.colorThree .ButtonStyle {
+  background-color: #37b182;
+}
 
 .colorFour .ContentText h2 span {
   color: #1854b4;
-}
-.colorFour .ContentText .about {
-  background-color: #1854b4;
 }
 .colorFour .ContentImg::before {
   border-top: 6px solid #1854b4;
@@ -10650,6 +10855,40 @@ body {
 }
 .colorFour .ExplainAbout .MyJop span {
   color: #1854b4;
+}
+.colorFour .InformationSkill .progrees-line span {
+  background-color: #1854b4;
+}
+.colorFour .ButtonStyle {
+  background-color: #1854b4;
+}
+
+body {
+  font-family: "Arima", cursive;
+}
+
+.mySidenav {
+  background-color: #f2f2fc;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fdf9ff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #504e70;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #302e70;
 }
 
 /*# sourceMappingURL=style.css.map */

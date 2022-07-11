@@ -1,0 +1,56 @@
+.progress-pie-chart {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+  position: relative;
+  margin: 0 0 $margintp $margintlr;
+  &.gt-50 {
+    position: relative;
+    background-color: $text-black-700;
+  }
+  p {
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    width: 100%;
+    text-transform: capitalize;
+    color: $text-black-900;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+}
+.ppc-progress {
+  @include circle($size);
+  clip: rect(0, $size, $size, #{$size/2});
+  .ppc-progress-fill {
+    @include circle($size);
+    clip: rect(0, #{$size/2}, $size, 0);
+    background: $text-black-700;
+    transform: rotate(0deg);
+    transition: all 0.5s;
+  }
+  .gt-50 & {
+    clip: rect(0, #{$size/2}, $size, 0);
+    .ppc-progress-fill {
+      clip: rect(0, $size, $size, #{$size/2});
+      background: #e5e5e5;
+    }
+  }
+}
+.ppc-percents {
+  @include circle(#{$size/1.15});
+  background: #fff;
+  text-align: center;
+  display: table;
+  span {
+    display: block;
+    font-size: $sizeP;
+    font-weight: bold;
+    color: $text-black-900;
+  }
+}
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}

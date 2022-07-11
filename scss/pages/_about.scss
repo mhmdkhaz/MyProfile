@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap");
+// ------------------- start in about me -------------------
+.mySidenav {
+  .ExplainAbout {
+    margin-top: 100px;
+    .MyJop {
+      //   @extend .TextWeb;
+    }
+    p {
+      @include styleP;
+    }
+  }
+  .InformationSkill {
+    margin-top: $margintp;
+    .Information {
+      margin-bottom: $margintp;
+      h4 {
+        font-weight: 1200;
+        color: $text-black-900;
+        border-bottom: 1px solid $text-black-700;
+        padding: $padingtp;
+        text-transform: capitalize;
+        span {
+          font-weight: 500;
+          font-size: $sizeP;
+          color: $text-black-700;
+        }
+        @media only screen and (max-width: $widhtmobile) {
+          text-align: center;
+        }
+      }
+      .group-button {
+        margin-top: $margintp;
+        padding: 10px;
+        button {
+          margin-left: $marginLeft;
+        }
+      }
+    }
+  }
+}

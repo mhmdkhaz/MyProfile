@@ -10,7 +10,7 @@
           font-family: "Clicker Script", cursive;
         }
       }
-      h2 {
+      .TextWeb {
         font-size: $sizeH;
         width: 100%;
         span {
@@ -61,20 +61,5 @@
       text-align: center;
       margin-bottom: 20px;
     }
-  }
-}
-
-// ------------------- start in about me -------------------
-.mySidenav {
-  .ExplainAbout {
-    margin-top: 100px;
-    .MyJop {
-      @extend .MyName;
-    }
-  }
-  @media only screen and (max-width: $widhtmobile) {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
   }
 }

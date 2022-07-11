@@ -2,15 +2,14 @@
 //abstracts
 @import "abstracts/variables", "abstracts/mixin";
 // Pages
-@import "pages/style";
-@import "pages/glopal";
+@import "pages/style", "pages/about";
 
 //Components
 @import "components/buttons", "components/OpenCloseSidebar",
-  "components/MainTile";
+  "components/MainTile", "components/progress", "components/Loading";
 
 // Layouts
-@import "layout/asidebar", "layout/setting";
+@import "layout/asidebar", "layout/setting", "layout/glopal";
 
 // base
 @import "base/typography", "base/common", "base/animation";

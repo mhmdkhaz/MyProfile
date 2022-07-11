@@ -1,0 +1,27 @@
+body {
+  font-family: "Arima", cursive;
+}
+
+.mySidenav {
+  background-color: $bg-black-900;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $bg-black-100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $text-black-700;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $text-black-900;
+}

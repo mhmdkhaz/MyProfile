@@ -1,20 +1,30 @@
 @mixin styleP {
-    font-size: $sizeP;
-    letter-spacing: 2px;
-    color: $text-black-900;
+  font-size: $sizeP;
+  letter-spacing: 2px;
+  color: $text-black-900;
 }
 
 // animatin setting
 @mixin keyframes-animation($name) {
-    @-webkit-keyframes #{$name} {
-      @content;
-    }
-    @keyframes #{$name} {
-      @content;
-    }
+  @-webkit-keyframes #{$name} {
+    @content;
   }
-  
-  @mixin prefix-property($name, $value) {
-    -webkit-#{$name}: $value;
-            #{$name}: $value;
+  @keyframes #{$name} {
+    @content;
   }
+}
+
+@mixin prefix-property($name, $value) {
+  -webkit-#{$name}: $value;
+  #{$name}: $value;
+}
+
+@mixin circle($size) {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - #{$size/2});
+  top: calc(50% - #{$size/2});
+  width: $size;
+  height: $size;
+}

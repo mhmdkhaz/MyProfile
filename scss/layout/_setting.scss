@@ -65,9 +65,6 @@
         color: $beafname;
       }
     }
-    .about {
-      background-color: $beafname;
-    }
   }
   // border before and after img
   .ContentImg {
@@ -137,6 +134,16 @@
       }
     }
   }
+  .InformationSkill {
+    .progrees-line {
+      span {
+        background-color: $beafname;
+      }
+    }
+  }
+  .ButtonStyle {
+    background-color: $beafname;
+  }
 }
 
 //------------------ color orange -----------------
@@ -147,9 +154,6 @@
       span {
         color: $ColorOrange;
       }
-    }
-    .about {
-      background-color: $ColorOrange;
     }
   }
   // border before and after img
@@ -220,6 +224,16 @@
       }
     }
   }
+  .InformationSkill {
+    .progrees-line {
+      span {
+        background-color: $ColorOrange;
+      }
+    }
+  }
+  .ButtonStyle {
+    background-color: $ColorOrange;
+  }
 }
 
 //---------------------- color three ----------------------
@@ -230,9 +244,6 @@
       span {
         color: $ColorGreen;
       }
-    }
-    .about {
-      background-color: $ColorGreen;
     }
   }
   // border before and after img
@@ -303,6 +314,16 @@
       }
     }
   }
+  .InformationSkill {
+    .progrees-line {
+      span {
+        background-color: $ColorGreen;
+      }
+    }
+  }
+  .ButtonStyle {
+    background-color: $ColorGreen;
+  }
 }
 
 //------------------ color blue ------------------
@@ -313,9 +334,6 @@
       span {
         color: $ColorBlue;
       }
-    }
-    .about {
-      background-color: $ColorBlue;
     }
   }
   // border before and after img
@@ -385,5 +403,15 @@
         color: $ColorBlue;
       }
     }
+  }
+  .InformationSkill {
+    .progrees-line {
+      span {
+        background-color: $ColorBlue;
+      }
+    }
+  }
+  .ButtonStyle {
+    background-color: $ColorBlue;
   }
 }

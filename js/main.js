@@ -1,3 +1,12 @@
+// start in settimeout in loading
+// let Loading = document.getElementById("load");
+// window.onload = function Loading() {
+// let TimeLoad = setTimeout(() => {
+//   Loading.style.display = "none";
+// }, 3000);
+// };
+
+// start in theme color and change color item
 let setting = document.querySelector(".icontSetting");
 let ShowColor = document.querySelector(".AllColor");
 let change = document.querySelectorAll(".ChangeColor .ShowColor");
@@ -83,3 +92,25 @@ function Delete() {
 }
 
 INTERVAL_VALue = setInterval(Type, 100);
+
+// start in progress
+let VlauePrecent = document.querySelectorAll(".Skill .progress-pie-chart");
+let RoteatProgres = document.querySelectorAll(".Skill .ppc-progress-fill");
+let Mark = document.querySelectorAll(".ppc-percents span");
+let started = true;
+
+window.onscroll = function Progress() {
+  for (let i = 0; i < VlauePrecent.length; i++) {
+    if (window.scrollY >= VlauePrecent[i].offsetTop - 500) {
+      console.log("ddd");
+      let Precent = VlauePrecent[i].dataset.percent;
+      let Deg = (360 * Precent) / 100;
+
+      if (Precent > 50) {
+        VlauePrecent[i].classList.add("gt-50");
+      }
+      RoteatProgres[i].style.transform = `rotate(${Deg}deg)`;
+      Mark[i].textContent = `${Precent}%`;
+    }
+  }
+};
