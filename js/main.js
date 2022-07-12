@@ -1,10 +1,10 @@
 // start in settimeout in loading
-// let Loading = document.getElementById("load");
-// window.onload = function Loading() {
-// let TimeLoad = setTimeout(() => {
-//   Loading.style.display = "none";
-// }, 3000);
-// };
+let Loading = document.getElementById("load");
+window.onload = function LoadingIndex() {
+  setTimeout(() => {
+    Loading.style.display = "none";
+  }, 3500);
+};
 
 // start in theme color and change color item
 let setting = document.querySelector(".icontSetting");
@@ -101,8 +101,7 @@ let started = true;
 
 window.onscroll = function Progress() {
   for (let i = 0; i < VlauePrecent.length; i++) {
-    if (window.scrollY >= VlauePrecent[i].offsetTop - 500) {
-      console.log("ddd");
+    if (window.scrollY >= VlauePrecent[i].offsetTop - 1500) {
       let Precent = VlauePrecent[i].dataset.percent;
       let Deg = (360 * Precent) / 100;
 

@@ -12,6 +12,8 @@
       rel="stylesheet"
       href="/node_modules/@fortawesome/fontawesome-free/css/all.css"
     />
+    <!-- start in aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="colorOne">
     <!-- -------------  start in theme color -------------   -->
@@ -54,12 +56,11 @@
     <div class="mySidenav">
       <div class="container-fluid">
         <div class="row">
-
-          <div class="col-md-2 sidebar">
-              <div class="Fix" >
-              <span class="d-block d-md-none" id="CloseSidebar"
+          <div class="col-md-2 col-xl-2 sidebar">
+            <div class="Fix">
+              <span class="d-block d-lg-none" id="CloseSidebar"
                 ><i class="fa-solid fa-xmark"></i
-                  ></span>
+              ></span>
               <div class="TextName">
                 <p class="name text-center"><span class="font">m </span>hmd</p>
               </div>
@@ -110,13 +111,15 @@
             </div>
           </div>
 
-          <div class="col-md-10 col-sm-12">
-            <span class="d-block d-md-none" id="OpenSidebar"
+          <div class="col-md-10 col-sm-12 col-xl-10">
+            <span class="d-block d-lg-none" id="OpenSidebar"
               ><i class="fa-solid fa-bars-staggered"></i
             ></span>
             <div class="container">
               <div
                 class="ExplainAbout flex flex-column justify-content-center align-items-cente"
+                data-aos="fade-right"
+                data-aos-duration="1000"
               >
                 <h1 class="MainTitle">about me</h1>
                 <h2 class="MyJop">
@@ -129,9 +132,15 @@
                   dolore rem, quos recusandae aliquid odio delectus.
                 </p>
               </div>
+              <!-- ---------------- start Information and skill ---------------- -->
               <div class="InformationSkill">
                 <div class="row">
-                  <div class="col-lg-7 Information">
+                  <!-- ---------------- start Information ---------------- -->
+                  <div
+                    class="col-lg-7 Information"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                  >
                     <div class="row">
                       <div class="col-md-6">
                         <h4>birthday : <span>7/7/2000</span></h4>
@@ -146,96 +155,163 @@
                         <h4>freelancer : <span>availiabel</span></h4>
                       </div>
                       <div class="group-button d-flex justify-content-center">
-                        <button type="button" class="btn ButtonStyle">Middle</button>
-                        <button type="button" class="btn ButtonStyle">Right</button>
+                        <button type="button" class="btn ButtonStyle">
+                          Middle
+                        </button>
+                        <button type="button" class="btn ButtonStyle">
+                          Right
+                        </button>
                       </div>
                     </div>
                   </div>
+                  <!-- ---------------- end Information ---------------- -->
 
-                  <div class="col-lg-5 Skill d-flex flex-wrap align-content-start ">
+                  <!-- ---------------- start skill ---------------- -->
+                  <div class="col-lg-5 Skill">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div
+                          class="col-6 col-lg-4 d-flex justify-content-center"
+                        >
+                          <div
+                            class="progress-pie-chart"
+                            data-aos="zoom-in"
+                            data-percent="10"
+                          >
+                            <div class="ppc-progress">
+                              <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                              <div class="pcc-percents-wrapper">
+                                <span>%</span>
+                              </div>
+                            </div>
+                            <p>html</p>
+                          </div>
+                        </div>
 
-                    <div class="progress-pie-chart" data-percent="10">
-                      <div class="ppc-progress">
-                        <div class="ppc-progress-fill"></div>
-                      </div>
-                      <div class="ppc-percents">
-                        <div class="pcc-percents-wrapper">
-                          <span>%</span>
+                        <div
+                          class="col-6 col-lg-4 d-flex justify-content-center"
+                        >
+                          <div
+                            class="progress-pie-chart"
+                            data-aos="zoom-in"
+                            data-percent="20"
+                          >
+                            <div class="ppc-progress">
+                              <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                              <div class="pcc-percents-wrapper">
+                                <span>%</span>
+                              </div>
+                            </div>
+                            <p>css</p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="col-6 col-lg-4 d-flex justify-content-center"
+                        >
+                          <div
+                            class="progress-pie-chart"
+                            data-aos="zoom-in"
+                            data-percent="30"
+                          >
+                            <div class="ppc-progress">
+                              <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                              <div class="pcc-percents-wrapper">
+                                <span>%</span>
+                              </div>
+                            </div>
+                            <p>js</p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="col-6 col-lg-4 d-flex justify-content-center"
+                        >
+                          <div
+                            class="progress-pie-chart"
+                            data-aos="zoom-in"
+                            data-percent="40"
+                          >
+                            <div class="ppc-progress">
+                              <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                              <div class="pcc-percents-wrapper">
+                                <span>%</span>
+                              </div>
+                            </div>
+                            <p>bootstrap 5</p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="col-6 col-lg-4 d-flex justify-content-center"
+                        >
+                          <div
+                            class="progress-pie-chart"
+                            data-aos="zoom-in"
+                            data-percent="70"
+                          >
+                            <div class="ppc-progress">
+                              <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                              <div class="pcc-percents-wrapper">
+                                <span>%</span>
+                              </div>
+                            </div>
+                            <p>scss</p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="col-6 col-lg-4 d-flex justify-content-center"
+                        >
+                          <div
+                            class="progress-pie-chart"
+                            data-aos="zoom-in"
+                            data-percent="90"
+                          >
+                            <div class="ppc-progress">
+                              <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                              <div class="pcc-percents-wrapper">
+                                <span>%</span>
+                              </div>
+                            </div>
+                            <p>git hub</p>
+                          </div>
                         </div>
                       </div>
-                      <p>html</p>
                     </div>
-
-                    
-                    <div class="progress-pie-chart" data-percent="20">
-                      <div class="ppc-progress">
-                        <div class="ppc-progress-fill"></div>
-                      </div>
-                      <div class="ppc-percents">
-                        <div class="pcc-percents-wrapper">
-                          <span>%</span>
-                        </div>
-                      </div>
-                      <p>css</p>
-                    </div>
-
-                    
-                    <div class="progress-pie-chart" data-percent="30">
-                      <div class="ppc-progress">
-                        <div class="ppc-progress-fill"></div>
-                      </div>
-                      <div class="ppc-percents">
-                        <div class="pcc-percents-wrapper">
-                          <span>%</span>
-                        </div>
-                      </div>
-                      <p>js</p>
-                    </div>
-
-                    <div class="progress-pie-chart" data-percent="40">
-                      <div class="ppc-progress">
-                        <div class="ppc-progress-fill"></div>
-                      </div>
-                      <div class="ppc-percents">
-                        <div class="pcc-percents-wrapper">
-                          <span>%</span>
-                        </div>
-                      </div>
-                      <p>bootstrap 5</p>
-                    </div>
-
-                    <div class="progress-pie-chart" data-percent="70">
-                      <div class="ppc-progress">
-                        <div class="ppc-progress-fill"></div>
-                      </div>
-                      <div class="ppc-percents">
-                        <div class="pcc-percents-wrapper">
-                          <span>%</span>
-                        </div>
-                      </div>
-                      <p>scss</p>
-                    </div>
-
-                    <div class="progress-pie-chart" data-percent="90">
-                      <div class="ppc-progress">
-                        <div class="ppc-progress-fill"></div>
-                      </div>
-                      <div class="ppc-percents">
-                        <div class="pcc-percents-wrapper">
-                          <span>%</span>
-                        </div>
-                      </div>
-                      <p>git hub</p>
-                    </div>
-
+                  </div>
+                  <!-- ---------------- end skill ---------------- -->
                 </div>
-
               </div>
+              <!-- ---------------- end Information and skill ---------------- -->
+              <!-- ---------------- start in eduction expirence ------------------ -->
+              <div class="deuexp">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-6">deduction</div>
+                    <div class="col-md-6">experience</div>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------- start in eduction expirence ------------------ -->
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <!-- -------------  end mainc sidebar -------------  -->
 
     <!-- -------------  start js bootstrap -------------  -->
@@ -249,6 +325,11 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <!-- start in aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- -------------  start js -------------  -->
     <script src="js/main.js"></script>
   </body>

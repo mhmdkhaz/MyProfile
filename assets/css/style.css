@@ -1,11 +1,13 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap"); /*!
+/*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import "../node_modules/swiper/swiper-bundle.css";
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10104,36 +10106,36 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.mySidenav .content {
+.content {
   position: relative;
   display: flex;
 }
-.mySidenav .content .ContentText .MyName span {
+.content .ContentText .MyName span {
   font-family: "Clicker Script", cursive;
 }
-.mySidenav .content .ContentText .TextWeb {
+.content .ContentText .TextWeb {
   font-size: 2rem;
   width: 100%;
 }
-.mySidenav .content .ContentText .TextWeb span {
+.content .ContentText .TextWeb span {
   font-weight: 800;
   text-transform: capitalize;
 }
-.mySidenav .content .ContentText p {
+.content .ContentText p {
   font-size: 1.2rem;
   letter-spacing: 2px;
   color: #302e70;
 }
 @media only screen and (max-width: 720px) {
-  .mySidenav .content .ContentText {
+  .content .ContentText {
     margin: 70px 0;
   }
 }
-.mySidenav .content .ImgMyself .ContentImg {
+.content .ImgMyself .ContentImg {
   position: relative;
   width: 100%;
 }
-.mySidenav .content .ImgMyself .ContentImg::before {
+.content .ImgMyself .ContentImg::before {
   content: "";
   position: absolute;
   top: -10%;
@@ -10141,7 +10143,7 @@ textarea.form-control-lg {
   width: 70px;
   height: 70px;
 }
-.mySidenav .content .ImgMyself .ContentImg::after {
+.content .ImgMyself .ContentImg::after {
   content: "";
   position: absolute;
   bottom: -10%;
@@ -10149,17 +10151,17 @@ textarea.form-control-lg {
   width: 70px;
   height: 70px;
 }
-.mySidenav .content .ImgMyself .ContentImg img {
+.content .ImgMyself .ContentImg img {
   width: 60%;
   height: 100%;
 }
 @media only screen and (max-width: 720px) {
-  .mySidenav .content .ImgMyself .ContentImg img {
+  .content .ImgMyself .ContentImg img {
     width: 85%;
   }
 }
 @media only screen and (max-width: 720px) {
-  .mySidenav .content {
+  .content {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -10277,7 +10279,7 @@ textarea.form-control-lg {
   border-radius: 50%;
   background-color: #e5e5e5;
   position: relative;
-  margin: 0 0 40px 40px;
+  margin-bottom: 40px;
 }
 .progress-pie-chart.gt-50 {
   position: relative;
@@ -10356,9 +10358,7 @@ textarea.form-control-lg {
   height: 100vh;
   z-index: 3;
   overflow: visible;
-  user-select: none;
   cursor: default;
-  display: none;
 }
 #load div {
   position: absolute;
@@ -10566,7 +10566,7 @@ textarea.form-control-lg {
   transition: all 0.1s;
   color: #504e70;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 992px) {
   .sidebar {
     width: 0;
     height: 0;

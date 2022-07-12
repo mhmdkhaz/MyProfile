@@ -4,7 +4,7 @@
   border-radius: 50%;
   background-color: #e5e5e5;
   position: relative;
-  margin: 0 0 $margintp $margintlr;
+  margin-bottom: $margintp;
   &.gt-50 {
     position: relative;
     background-color: $text-black-700;
