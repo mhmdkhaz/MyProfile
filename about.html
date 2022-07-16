@@ -14,6 +14,8 @@
     />
     <!-- start in aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- start in swiper js -->
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css" />
   </head>
   <body class="colorOne">
     <!-- -------------  start in theme color -------------   -->
@@ -154,7 +156,7 @@
                         <h4>phone : <span>+963957432443</span></h4>
                         <h4>freelancer : <span>availiabel</span></h4>
                       </div>
-                      <div class="group-button d-flex justify-content-center">
+                      <div class="group-button">
                         <button type="button" class="btn ButtonStyle">
                           Middle
                         </button>
@@ -296,12 +298,36 @@
                 </div>
               </div>
               <!-- ---------------- end Information and skill ---------------- -->
+
               <!-- ---------------- start in eduction expirence ------------------ -->
-              <div class="deuexp">
-                <div class="container-fluid">
+              <div class="eduexp">
+                <div class="container">
                   <div class="row">
-                    <div class="col-md-6">deduction</div>
-                    <div class="col-md-6">experience</div>
+                    <div class="col-md-6" style="overflow: hidden">
+                      <h1>eduction</h1>
+                      <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">eduction</div>
+                          <div class="swiper-slide">Slide 2</div>
+                          <div class="swiper-slide">Slide 3</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6" style="overflow: hidden">
+                      <h1>expirence</h1>
+                      <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">expirence</div>
+                          <div class="swiper-slide">
+                            <p class="date">
+                              <i class="fa-solid fa-calendar"></i>
+                              <span>17/10/2019-17/11/2019</span>
+                            </p>
+                          </div>
+                          <div class="swiper-slide">Slide 3</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -330,6 +356,8 @@
     <script>
       AOS.init();
     </script>
+    <!-- start in swiper js -->
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
     <!-- -------------  start js -------------  -->
     <script src="js/main.js"></script>
   </body>

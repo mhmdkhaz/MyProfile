@@ -38,4 +38,11 @@
       }
     }
   }
+  .eduexp {
+    h1 {
+      text-transform: capitalize;
+      font-size: $sizeH;
+      color: $text-black-900;
+    }
+  }
 }

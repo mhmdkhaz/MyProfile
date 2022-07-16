@@ -1,0 +1,29 @@
+.swiper {
+  width: 80%;
+  height: 320px;
+  margin-bottom: $margintp;
+  overflow: hidden;
+
+  .swiper-slide {
+    border-radius: $bRadiusButton;
+    border: 1px solid $beafname;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    background-color: $bg-black-100;
+    padding: $padingtp;
+    .date {
+      margin-left: $margintlr -10px;
+    }
+    &:nth-child(1) {
+      font-size: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $beafname;
+      font-family: "Clicker Script", cursive;
+      font-weight: 800;
+      text-transform: capitalize;
+      text-shadow: 2px 2px 3px blue;
+    }
+  }
+}

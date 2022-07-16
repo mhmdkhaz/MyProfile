@@ -144,6 +144,11 @@
   .ButtonStyle {
     background-color: $beafname;
   }
+  .swiper {
+    .swiper-slide {
+      border: 1px solid $beafname;
+    }
+  }
 }
 
 //------------------ color orange -----------------
@@ -233,6 +238,11 @@
   }
   .ButtonStyle {
     background-color: $ColorOrange;
+  }
+  .swiper {
+    .swiper-slide {
+      border: 1px solid $ColorOrange;
+    }
   }
 }
 
@@ -324,6 +334,11 @@
   .ButtonStyle {
     background-color: $ColorGreen;
   }
+  .swiper {
+    .swiper-slide {
+      border: 1px solid $ColorGreen;
+    }
+  }
 }
 
 //------------------ color blue ------------------
@@ -413,5 +428,10 @@
   }
   .ButtonStyle {
     background-color: $ColorBlue;
+  }
+  .swiper {
+    .swiper-slide {
+      border: 1px solid $ColorBlue;
+    }
   }
 }

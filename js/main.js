@@ -3,7 +3,7 @@ let Loading = document.getElementById("load");
 window.onload = function LoadingIndex() {
   setTimeout(() => {
     Loading.style.display = "none";
-  }, 3500);
+  }, 1000);
 };
 
 // start in theme color and change color item
@@ -113,3 +113,8 @@ window.onscroll = function Progress() {
     }
   }
 };
+// start in swiper js
+let swiper = new Swiper(".mySwiper", {
+  effect: "cards",
+  grabCursor: true,
+});

@@ -6,7 +6,8 @@
 
 //Components
 @import "components/buttons", "components/OpenCloseSidebar",
-  "components/MainTile", "components/progress", "components/Loading";
+  "components/MainTile", "components/progress", "components/Loading",
+  "components/Carousel.scss";
 
 // Layouts
 @import "layout/asidebar", "layout/setting", "layout/glopal";
