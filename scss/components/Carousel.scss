@@ -15,15 +15,16 @@
       margin-left: $margintlr -10px;
     }
     &:nth-child(1) {
-      font-size: 4rem;
+      font-size: 5rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: $beafname;
-      font-family: "Clicker Script", cursive;
+      color: #fff;
       font-weight: 800;
+      letter-spacing: 0.2rem;
       text-transform: capitalize;
-      text-shadow: 2px 2px 3px blue;
+      text-shadow: -2px -2px 0px $text-black-700, 4px 4px 0px $text-black-700,
+        7px 7px 0px $text-black-700;
     }
   }
 }
