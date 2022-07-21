@@ -15,6 +15,8 @@
     .Information {
       margin-bottom: $margintp;
       h4 {
+        display: flex;
+        flex-wrap: wrap;
         font-weight: 1200;
         color: $text-black-900;
         border-bottom: 1px solid $text-black-700;
@@ -24,9 +26,6 @@
           font-weight: 500;
           font-size: $sizeP;
           color: $text-black-700;
-        }
-        @media only screen and (max-width: $widhtmobile) {
-          text-align: center;
         }
       }
       .group-button {

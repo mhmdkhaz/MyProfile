@@ -10184,6 +10184,8 @@ textarea.form-control-lg {
   margin-bottom: 40px;
 }
 .mySidenav .InformationSkill .Information h4 {
+  display: flex;
+  flex-wrap: wrap;
   font-weight: 1200;
   color: #302e70;
   border-bottom: 1px solid #504e70;
@@ -10194,11 +10196,6 @@ textarea.form-control-lg {
   font-weight: 500;
   font-size: 1.2rem;
   color: #504e70;
-}
-@media only screen and (max-width: 720px) {
-  .mySidenav .InformationSkill .Information h4 {
-    text-align: center;
-  }
 }
 .mySidenav .InformationSkill .Information .group-button {
   margin-top: 40px;
