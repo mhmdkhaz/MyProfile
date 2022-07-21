@@ -1,9 +1,9 @@
 // start in settimeout in loading
-let Loading = document.getElementById("load");
+let Loading = document.getElementById("loading");
 window.onload = function LoadingIndex() {
   setTimeout(() => {
     Loading.style.display = "none";
-  }, 1000);
+  }, 3000);
 };
 
 // start in theme color and change color item
@@ -40,12 +40,12 @@ let IconList = document.querySelector(".IconList");
 
 function ChangeColorCloseOpenSidebar() {
   OpenSide.onclick = () => {
-    Sidebar.style.width = "100%";
+    Sidebar.style.width = "80%";
     Sidebar.style.height = "100%";
   };
   CloseSide.onclick = () => {
-    Sidebar.style.height = "0";
-    console.log("ddd");
+    Sidebar.style.width = "0";
+    // Sidebar.style.height = "0";
   };
 }
 ChangeColorCloseOpenSidebar();
@@ -114,64 +114,7 @@ window.onscroll = function Progress() {
   }
 };
 // start in swiper js
-let swiper = new Swiper(".mySwiper", {
-  effect: "cards",
-  grabCursor: true,
-});
-
-if ($(".swiper-container").length) {
-  let mySwiper = new Swiper(".swiper-container", {
-    loop: false,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      300: {
-        mousewheel: true,
-        keyboard: true,
-        slidesPerView: 1,
-        spaceBetween: 24,
-        allowSlidePrev: true,
-        allowSlideNext: true,
-      },
-      400: {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        allowSlidePrev: true,
-        allowSlideNext: true,
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-        allowSlidePrev: true,
-        allowSlideNext: true,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 56,
-        allowSlidePrev: true,
-        allowSlideNext: true,
-      },
-      960: {
-        slidesPerView: 2,
-        spaceBetween: 56,
-        allowSlidePrev: true,
-        allowSlideNext: true,
-      },
-      991: {
-        slidesPerView: 3,
-        spaceBetween: 28,
-        allowSlidePrev: false,
-        allowSlideNext: false,
-      },
-    },
-  });
-  //Reload swiper
-  $(window).resize(function () {
-    mySwiper.update();
-  });
-  $(window).on("load", function () {
-    mySwiper.update();
-  });
-}
+// let swiper = new Swiper(".mySwiper", {
+//   effect: "cards",
+//   grabCursor: true,
+// });

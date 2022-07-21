@@ -1,9 +1,13 @@
 .sidebar {
-  background-color: $bg-black-100;
   transition: 0.5s;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: $bg-black-100;
+
   .TextName {
-    margin-bottom: 30%;
     .name {
       position: relative;
       font-size: 1.2rem;
@@ -38,94 +42,17 @@
   .list {
     .list-group {
       li {
+        text-transform: capitalize;
+        cursor: pointer;
         position: relative;
-        padding: 5px 15px;
+        padding: 10px 15px;
         list-style: none;
         border-bottom: 1px solid $text-black-900;
         overflow: hidden;
         transition: all 0.1s linear;
-        &:hover {
-          span {
-            position: absolute;
-
-            &:nth-child(1) {
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 3px;
-              animation: animate1 1s linear infinite;
-            }
-            @keyframes animate1 {
-              0% {
-                left: -100%;
-              }
-              50%,
-              100% {
-                left: 100%;
-              }
-            }
-
-            &:nth-child(2) {
-              top: -100%;
-              right: 0;
-              width: 3px;
-              height: 100%;
-              animation: animate2 1s linear infinite;
-              animation-delay: 0.25s;
-            }
-
-            @keyframes animate2 {
-              0% {
-                top: -100%;
-              }
-              50%,
-              100% {
-                top: 100%;
-              }
-            }
-            &:nth-child(3) {
-              bottom: 0;
-              right: 0;
-              width: 100%;
-
-              animation: animate3 1s linear infinite;
-              animation-delay: 0.5s;
-            }
-            @keyframes animate3 {
-              0% {
-                right: -100%;
-                height: 3px;
-              }
-              50%,
-              100% {
-                height: 2px;
-                right: 100%;
-              }
-            }
-
-            &:nth-child(4) {
-              bottom: -100%;
-              left: 0;
-              width: 3px;
-              height: 100%;
-              animation: animate4 1s linear infinite;
-              animation-delay: 0.75s;
-            }
-            @keyframes animate4 {
-              0% {
-                bottom: -100%;
-              }
-              50%,
-              100% {
-                bottom: 100%;
-              }
-            }
-          }
-        }
 
         i {
           transition: all 0.8s;
-          color: $text-black-700;
         }
         a {
           text-transform: capitalize;
@@ -133,16 +60,95 @@
           margin-left: 25px;
           text-align: start;
           transition: all 0.1s;
+        }
+        .NotActive {
           color: $text-black-700;
         }
       }
     }
   }
+  // start in social media
+  .SocialMedia {
+    width: 100%;
+    span {
+      margin-top: 10px;
+      font-size: 1rem;
+      list-style: none;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      a {
+        transition: all 0.5s ease;
+        color: $text-black-700;
+        border: 3px solid $text-black-700;
+        border-radius: 50%;
+        padding: 10px;
+        text-decoration: none;
+      }
+      &:hover {
+        margin-top: -1px;
+        // facebook
+        .LinkFace {
+          border: 3px solid #3b5998;
+          box-shadow: 0 0 15px #3b5998;
+          transition: all 0.5s ease;
+        }
+        .fa-facebook-f {
+          color: #3b5998;
+          text-shadow: 0 0 15px #3b5998;
+          transition: all 0.5s ease;
+        }
+        // github
+        .LinkGit {
+          border: 3px solid #171515;
+          box-shadow: 0 0 15px #171515;
+          transition: all 0.5s ease;
+        }
+        .fa-github {
+          color: #171515;
+          text-shadow: 0 0 15px #171515;
+          transition: all 0.5s ease;
+        }
+        // linkedin
+        .LinkLinked {
+          border: 3px solid #0077b5;
+          box-shadow: 0 0 15px #0077b5;
+          transition: all 0.5s ease;
+        }
+        .fa-linkedin-in {
+          color: #0077b5;
+          text-shadow: 0 0 15px #0077b5;
+          transition: all 0.5s ease;
+        }
+        // Gmail
+        .LinkGmail {
+          border: 3px solid #ea4335;
+          box-shadow: 0 0 15px #ea4335;
+          transition: all 0.5s ease;
+        }
+        .fa-envelope-circle-check {
+          color: #ea4335;
+          text-shadow: 0 0 15px #ea4335;
+          transition: all 0.5s ease;
+        }
+        // whatsapp
+        .LiknWtatsapp {
+          border: 3px solid #4dc247;
+          box-shadow: 0 0 15px #4dc247;
+          transition: all 0.5s ease;
+        }
+        .fa-whatsapp {
+          color: #4dc247;
+          text-shadow: 0 0 15px #4dc247;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+
   @media only screen and (max-width: $maxmeiumm) {
     width: 0;
-    height: 0;
+    height: 100%;
     overflow: hidden;
-    position: fixed;
     z-index: 1;
     top: 0;
     left: 0;

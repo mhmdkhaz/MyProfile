@@ -1,13 +1,11 @@
 @charset "UTF-8";
-/*!
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap"); /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import "../node_modules/swiper/swiper-bundle.css";
-@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Bakbak+One&family=Clicker+Script&family=Patrick+Hand&family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10107,11 +10105,13 @@ textarea.form-control-lg {
   }
 }
 .content {
+  margin-left: 300px;
   position: relative;
   display: flex;
 }
 .content .ContentText .MyName span {
   font-family: "Clicker Script", cursive;
+  font-weight: 800;
 }
 .content .ContentText .TextWeb {
   font-size: 2rem;
@@ -10168,40 +10168,53 @@ textarea.form-control-lg {
     margin-bottom: 20px;
   }
 }
+@media only screen and (max-width: 970px) {
+  .content {
+    margin-left: 0;
+  }
+}
 
-.mySidenav .ExplainAbout {
+.mySidenav .ContentAbout {
+  margin-left: 300px;
+}
+@media only screen and (max-width: 970px) {
+  .mySidenav .ContentAbout {
+    margin-left: 0;
+  }
+}
+.mySidenav .ContentAbout .ExplainAbout {
   margin-top: 100px;
 }
-.mySidenav .ExplainAbout p {
+.mySidenav .ContentAbout .ExplainAbout p {
   font-size: 1.2rem;
   letter-spacing: 2px;
   color: #302e70;
 }
-.mySidenav .InformationSkill {
+.mySidenav .ContentAbout .InformationSkill {
   margin-top: 40px;
 }
-.mySidenav .InformationSkill .Information {
+.mySidenav .ContentAbout .InformationSkill .Information {
   margin-bottom: 40px;
 }
-.mySidenav .InformationSkill .Information h4 {
+.mySidenav .ContentAbout .InformationSkill .Information h4 {
   display: flex;
   flex-wrap: wrap;
-  font-weight: 1200;
+  font-weight: 800;
   color: #302e70;
   border-bottom: 1px solid #504e70;
-  padding: 12px;
+  padding: 12px 0;
   text-transform: capitalize;
 }
-.mySidenav .InformationSkill .Information h4 span {
+.mySidenav .ContentAbout .InformationSkill .Information h4 span {
   font-weight: 500;
   font-size: 1.2rem;
   color: #504e70;
 }
-.mySidenav .InformationSkill .Information .group-button {
+.mySidenav .ContentAbout .InformationSkill .Information .group-button {
   margin-top: 40px;
   padding: 10px;
 }
-.mySidenav .InformationSkill .Information .group-button button {
+.mySidenav .ContentAbout .InformationSkill .Information .group-button button {
   margin-left: 10px;
 }
 .ButtonStyle {
@@ -10233,8 +10246,8 @@ textarea.form-control-lg {
 
 #CloseSidebar {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 0;
+  right: 0;
   z-index: 2;
 }
 #CloseSidebar i {
@@ -10347,94 +10360,67 @@ textarea.form-control-lg {
   vertical-align: middle;
 }
 
-#load {
-  background-color: #504e70;
-  position: fixed;
+/* Background Styles */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   width: 100vw;
-  height: 100vh;
-  z-index: 3;
-  overflow: visible;
-  cursor: default;
+  z-index: 5;
+  background: #f2f2fc;
+  position: fixed;
+  /* Loader Shape */
 }
-#load div {
+.loading h1 {
   position: absolute;
-  top: 50%;
-  width: 20px;
-  height: 36px;
-  opacity: 0;
-  font-size: 2rem;
+  text-align: center;
+  z-index: 2;
+  font-size: 2.5rem;
   font-weight: 800;
-  text-shadow: 0px 3px 0px #504e70, 0px 14px 10px rgba(253, 249, 255, 0.15), 0px 24px 2px rgba(253, 249, 255, 0.1), 0px 34px 30px rgba(253, 249, 255, 0.1);
-  font-family: Helvetica, Arial, sans-serif;
-  animation: move 2s linear infinite;
-  transform: rotate(180deg);
-  color: #fdf9ff;
+  color: #302e70;
+  font-family: "Clicker Script", cursive;
 }
-#load div:nth-child(2) {
-  animation-delay: 0.2s;
-  -o-animation-delay: 0.2s;
-  -moz-animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
+.loading .loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent 40%, #504e70);
+  animation: animate 2s linear infinite;
+  /* Loader Animation */
 }
-#load div:nth-child(3) {
-  animation-delay: 0.4s;
-  -o-animation-delay: 0.4s;
-  -webkit-animation-delay: 0.4s;
-  -webkit-animation-delay: 0.4s;
-}
-#load div:nth-child(4) {
-  animation-delay: 0.6s;
-  -o-animation-delay: 0.6s;
-  -moz-animation-delay: 0.6s;
-  -webkit-animation-delay: 0.6s;
-}
-#load div:nth-child(5) {
-  animation-delay: 0.8s;
-  -o-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  -webkit-animation-delay: 0.8s;
-}
-#load div:nth-child(6) {
-  animation-delay: 1s;
-  -o-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -webkit-animation-delay: 1s;
-}
-#load div:nth-child(7) {
-  animation-delay: 1.2s;
-  -o-animation-delay: 1.2s;
-  -moz-animation-delay: 1.2s;
-  -webkit-animation-delay: 1.2s;
-}
-@keyframes move {
+@keyframes animate {
   0% {
-    left: 0;
-    opacity: 0;
-  }
-  35% {
-    left: 41%;
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    opacity: 1;
-  }
-  65% {
-    left: 59%;
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    opacity: 1;
   }
   100% {
-    left: 100%;
-    -moz-transform: rotate(-180deg);
-    -webkit-transform: rotate(-180deg);
-    -o-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-    opacity: 0;
+    transform: rotate(360deg);
   }
+}
+.loading .loader::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: #f2f2fc;
+  border-radius: 50%;
+  z-index: 999;
+}
+.loading .loader::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(45deg, transparent, transparent 40%, #504e70);
+  border-radius: 50%;
+  z-index: 999;
+  z-index: 1;
+  filter: blur(20px);
 }
 
 .swiper {
@@ -10466,12 +10452,13 @@ textarea.form-control-lg {
 }
 
 .sidebar {
-  background-color: #fdf9ff;
   transition: 0.5s;
-  position: relative;
-}
-.sidebar .TextName {
-  margin-bottom: 30%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #fdf9ff;
 }
 .sidebar .TextName .name {
   position: relative;
@@ -10504,83 +10491,17 @@ textarea.form-control-lg {
   height: 20px;
 }
 .sidebar .list .list-group li {
+  text-transform: capitalize;
+  cursor: pointer;
   position: relative;
-  padding: 5px 15px;
+  padding: 10px 15px;
   list-style: none;
   border-bottom: 1px solid #302e70;
   overflow: hidden;
   transition: all 0.1s linear;
 }
-.sidebar .list .list-group li:hover span {
-  position: absolute;
-}
-.sidebar .list .list-group li:hover span:nth-child(1) {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  animation: animate1 1s linear infinite;
-}
-@keyframes animate1 {
-  0% {
-    left: -100%;
-  }
-  50%, 100% {
-    left: 100%;
-  }
-}
-.sidebar .list .list-group li:hover span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 3px;
-  height: 100%;
-  animation: animate2 1s linear infinite;
-  animation-delay: 0.25s;
-}
-@keyframes animate2 {
-  0% {
-    top: -100%;
-  }
-  50%, 100% {
-    top: 100%;
-  }
-}
-.sidebar .list .list-group li:hover span:nth-child(3) {
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  animation: animate3 1s linear infinite;
-  animation-delay: 0.5s;
-}
-@keyframes animate3 {
-  0% {
-    right: -100%;
-    height: 3px;
-  }
-  50%, 100% {
-    height: 2px;
-    right: 100%;
-  }
-}
-.sidebar .list .list-group li:hover span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  animation: animate4 1s linear infinite;
-  animation-delay: 0.75s;
-}
-@keyframes animate4 {
-  0% {
-    bottom: -100%;
-  }
-  50%, 100% {
-    bottom: 100%;
-  }
-}
 .sidebar .list .list-group li i {
   transition: all 0.8s;
-  color: #504e70;
 }
 .sidebar .list .list-group li a {
   text-transform: capitalize;
@@ -10588,14 +10509,86 @@ textarea.form-control-lg {
   margin-left: 25px;
   text-align: start;
   transition: all 0.1s;
+}
+.sidebar .list .list-group li .NotActive {
   color: #504e70;
+}
+.sidebar .SocialMedia {
+  width: 100%;
+}
+.sidebar .SocialMedia span {
+  margin-top: 10px;
+  font-size: 1rem;
+  list-style: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar .SocialMedia span a {
+  transition: all 0.5s ease;
+  color: #504e70;
+  border: 3px solid #504e70;
+  border-radius: 50%;
+  padding: 10px;
+  text-decoration: none;
+}
+.sidebar .SocialMedia span:hover {
+  margin-top: -1px;
+}
+.sidebar .SocialMedia span:hover .LinkFace {
+  border: 3px solid #3b5998;
+  box-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+.sidebar .SocialMedia span:hover .fa-facebook-f {
+  color: #3b5998;
+  text-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+.sidebar .SocialMedia span:hover .LinkGit {
+  border: 3px solid #171515;
+  box-shadow: 0 0 15px #171515;
+  transition: all 0.5s ease;
+}
+.sidebar .SocialMedia span:hover .fa-github {
+  color: #171515;
+  text-shadow: 0 0 15px #171515;
+  transition: all 0.5s ease;
+}
+.sidebar .SocialMedia span:hover .LinkLinked {
+  border: 3px solid #0077b5;
+  box-shadow: 0 0 15px #0077b5;
+  transition: all 0.5s ease;
+}
+.sidebar .SocialMedia span:hover .fa-linkedin-in {
+  color: #0077b5;
+  text-shadow: 0 0 15px #0077b5;
+  transition: all 0.5s ease;
+}
+.sidebar .SocialMedia span:hover .LinkGmail {
+  border: 3px solid #ea4335;
+  box-shadow: 0 0 15px #ea4335;
+  transition: all 0.5s ease;
+}
+.sidebar .SocialMedia span:hover .fa-envelope-circle-check {
+  color: #ea4335;
+  text-shadow: 0 0 15px #ea4335;
+  transition: all 0.5s ease;
+}
+.sidebar .SocialMedia span:hover .LiknWtatsapp {
+  border: 3px solid #4dc247;
+  box-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+.sidebar .SocialMedia span:hover .fa-whatsapp {
+  color: #4dc247;
+  text-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
 }
 @media only screen and (max-width: 992px) {
   .sidebar {
     width: 0;
-    height: 0;
+    height: 100%;
     overflow: hidden;
-    position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
@@ -10730,6 +10723,9 @@ textarea.form-control-lg {
 .colorOne .swiper .swiper-slide {
   border: 1px solid #ec1839;
 }
+.colorOne .ActiveColor {
+  color: #ec1839;
+}
 
 .colorTow .ContentText h2 span {
   color: #fa5b0f;
@@ -10785,6 +10781,9 @@ textarea.form-control-lg {
 }
 .colorTow .swiper .swiper-slide {
   border: 1px solid #fa5b0f;
+}
+.colorTow .ActiveColor {
+  color: #37b182;
 }
 
 .colorThree .ContentText h2 span {
@@ -10842,6 +10841,9 @@ textarea.form-control-lg {
 .colorThree .swiper .swiper-slide {
   border: 1px solid #37b182;
 }
+.colorThree .ActiveColor {
+  color: #37b182;
+}
 
 .colorFour .ContentText h2 span {
   color: #1854b4;
@@ -10897,6 +10899,9 @@ textarea.form-control-lg {
 }
 .colorFour .swiper .swiper-slide {
   border: 1px solid #1854b4;
+}
+.colorFour .ActiveColor {
+  color: #1854b4;
 }
 
 body {

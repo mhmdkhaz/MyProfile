@@ -15,14 +15,9 @@
   </head>
   <body class="colorOne">
     <!-- -------------------- start in loading --------------------  -->
-    <div id="load">
-      <div>G</div>
-      <div>N</div>
-      <div>I</div>
-      <div>D</div>
-      <div>A</div>
-      <div>O</div>
-      <div>L</div>
+    <div class="loading" id="loading">
+      <h1>loading</h1>
+      <div class="loader"></div>
     </div>
     <!-- -------------------- end in loading --------------------  -->
 
@@ -63,105 +58,107 @@
     </div>
     <!--end in theme color  -->
     <!-- start mainc sidebar -->
-    <div class="mySidenav">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-2 sidebar">
-            <span class="d-block d-lg-none" id="CloseSidebar"
-              ><i class="fa-solid fa-xmark"></i
-            ></span>
-            <div class="TextName">
-              <p class="name text-center"><span class="font">m </span>hmd</p>
-            </div>
-            <div class="list d-flex justify-content-center">
-              <ul class="list-group">
-                <li class="my-3">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <i class="IconList fa-solid fa-house"></i
-                  ><a href="#" class="NameList">home</a>
-                </li>
-                <li class="my-3">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <i class="IconList fa-solid fa-user"></i
-                  ><a href="#" class="NameList">about</a>
-                </li>
-                <li class="my-3">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <i class="IconList fa-solid fa-list"></i
-                  ><a href="#" class="NameList">services</a>
-                </li>
-                <li class="my-3">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <i class="IconList fa-solid fa-id-card-clip"></i
-                  ><a href="#" class="NameList">portfolio</a>
-                </li>
-                <li class="my-3">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <i class="IconList fa-solid fa-comments"></i
-                  ><a href="#" class="NameList">contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <div class="mySidenav" style="height: 100vh">
+      <div class="sidebar">
+        <span class="d-block d-lg-none" id="CloseSidebar"
+          ><i class="fa-solid fa-xmark"></i
+        ></span>
+        <div class="TextName my-3">
+          <p class="name text-center"><span class="font">m </span>hmd</p>
+        </div>
+        <div class="list d-flex justify-content-center">
+          <ul class="list-group">
+            <li class="my-3">
+              <i class="IconList fa-solid fa-house ActiveColor"></i
+              ><a href="#" class="NameList ActiveColor">home</a>
+            </li>
+            <li class="my-3">
+              <i class="IconList fa-solid fa-user NotActive"></i
+              ><a href="testSidebar.html" class="NameList NotActive">about</a>
+            </li>
+            <li class="my-3">
+              <i class="IconList fa-solid fa-id-card-clip NotActive"></i
+              ><a href="#" class="NameList NotActive">portfolio</a>
+            </li>
+          </ul>
+        </div>
+        <section
+          class="SocialMedia d-flex flex-wrap justify-content-center my-4"
+        >
+          <span class="facebook">
+            <a
+              href="https://www.facebook.com/mohammed.khazaa"
+              class="LinkFace d-flex"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </span>
+          <span class="github">
+            <a href="https://github.com/mhmdkhaz" class="LinkGit d-flex">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </span>
+          <span class="linkedin">
+            <a href="" class="LinkLinked d-flex">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </span>
+          <span class="Gmail">
+            <a
+              href="https://mail.google.com/mail/u/0/?pli=1#inbox"
+              class="LinkGmail d-flex"
+            >
+              <i class="fa-solid fa-envelope-circle-check"></i>
+            </a>
+          </span>
+          <span class="whatsapp">
+            <a href="https://wa.me/+963957432443" class="LiknWtatsapp d-flex">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </span>
+        </section>
+      </div>
 
-          <div class="content col-lg-10 col-sm-12">
-            <span class="d-block d-lg-none" id="OpenSidebar"
-              ><i class="fa-solid fa-bars-staggered"></i
-            ></span>
-            <div class="container d-flex">
-              <div class="row">
-                <div
-                  class="col-md-7 d-flex flex-wrap align-content-center position-relative"
-                  data-aos="fade-right"
-                  data-aos-duration="500"
+      <div class="content">
+        <span class="d-block d-lg-none" id="OpenSidebar"
+          ><i class="fa-solid fa-bars-staggered"></i
+        ></span>
+        <div class="container d-flex">
+          <div class="row">
+            <div
+              class="col-md-7 d-flex align-items-center"
+              style="height: 100vh"
+              data-aos="fade-right"
+              data-aos-duration="500"
+            >
+              <div class="ContentText">
+                <h2 class="MyName">
+                  hello my name is <span>mohammed khazaa</span>
+                </h2>
+                <h2 class="TextWeb">I am a <span class="AutoWrite"></span></h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Perspiciatis tenetur libero, neque quia amet earum dignissimos
+                  doloremque mollitia optio officiis.
+                </p>
+                <a href="about.html"
+                  ><button class="btn about ButtonStyle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Read More
+                  </button></a
                 >
-                  <div class="ContentText">
-                    <h2 class="MyName">
-                      hello my name is <span>mohammed khazaa</span>
-                    </h2>
-                    <h2 class="TextWeb">
-                      I am a <span class="AutoWrite"></span>
-                    </h2>
-                    <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Perspiciatis tenetur libero, neque quia amet earum
-                      dignissimos doloremque mollitia optio officiis.
-                    </p>
-                    <a href="about.html"
-                      ><button class="btn about ButtonStyle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Read More
-                      </button></a
-                    >
-                  </div>
-                </div>
-                <div
-                  class="ImgMyself col-md-5 col-sm-12 d-flex flex-column justify-content-center align-items-center"
-                  data-aos="fade-left"
-                  data-aos-duration="500"
-                >
-                  <div class="ContentImg d-flex justify-content-center">
-                    <img src="images/MyPhoteProfile.jpg" alt="" />
-                  </div>
-                </div>
+              </div>
+            </div>
+            <div
+              class="ImgMyself col-md-5 col-sm-12 d-none d-lg-flex flex-column justify-content-center align-items-center"
+              data-aos="fade-left"
+              data-aos-duration="500"
+            >
+              <div class="ContentImg d-flex justify-content-center">
+                <img src="images/MyPhoteProfile.jpg" alt="" />
               </div>
             </div>
           </div>

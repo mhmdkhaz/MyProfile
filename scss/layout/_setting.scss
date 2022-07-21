@@ -149,6 +149,9 @@
       border: 1px solid $beafname;
     }
   }
+  .ActiveColor {
+    color: $beafname;
+  }
 }
 
 //------------------ color orange -----------------
@@ -243,6 +246,9 @@
     .swiper-slide {
       border: 1px solid $ColorOrange;
     }
+  }
+  .ActiveColor {
+    color: $ColorGreen;
   }
 }
 
@@ -339,6 +345,9 @@
       border: 1px solid $ColorGreen;
     }
   }
+  .ActiveColor {
+    color: $ColorGreen;
+  }
 }
 
 //------------------ color blue ------------------
@@ -433,5 +442,8 @@
     .swiper-slide {
       border: 1px solid $ColorBlue;
     }
+  }
+  .ActiveColor {
+    color: $ColorBlue;
   }
 }

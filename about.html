@@ -55,283 +55,235 @@
     </div>
     <!-- ------------- end in theme color -------------   -->
     <!-- -------------  start mainc sidebar -------------  -->
-    <div class="mySidenav">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-2 col-xl-2 sidebar">
-            <div class="Fix">
-              <span class="d-block d-lg-none" id="CloseSidebar"
-                ><i class="fa-solid fa-xmark"></i
-              ></span>
-              <div class="TextName">
-                <p class="name text-center"><span class="font">m </span>hmd</p>
-              </div>
-              <div class="list d-flex justify-content-center">
-                <ul class="list-group">
-                  <li class="my-3">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <i class="IconList fa-solid fa-house"></i
-                    ><a href="#" class="NameList">home</a>
-                  </li>
-                  <li class="my-3">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <i class="IconList fa-solid fa-user"></i
-                    ><a href="#" class="NameList">about</a>
-                  </li>
-                  <li class="my-3">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <i class="IconList fa-solid fa-list"></i
-                    ><a href="#" class="NameList">services</a>
-                  </li>
-                  <li class="my-3">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <i class="IconList fa-solid fa-id-card-clip"></i
-                    ><a href="#" class="NameList">portfolio</a>
-                  </li>
-                  <li class="my-3">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <i class="IconList fa-solid fa-comments"></i
-                    ><a href="#" class="NameList">contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <div class="mySidenav position-absolute" style="width: 100%">
+      <div class="sidebar">
+        <span class="d-block d-lg-none" id="CloseSidebar"
+          ><i class="fa-solid fa-xmark"></i
+        ></span>
+        <div class="TextName my-3">
+          <p class="name text-center"><span class="font">m </span>hmd</p>
+        </div>
+        <div class="list d-flex justify-content-center">
+          <ul class="list-group">
+            <li class="my-3">
+              <i class="IconList fa-solid fa-house ActiveColor"></i
+              ><a href="#" class="NameList ActiveColor">home</a>
+            </li>
+            <li class="my-3">
+              <i class="IconList fa-solid fa-user NotActive"></i
+              ><a href="testSidebar.html" class="NameList NotActive">about</a>
+            </li>
+            <li class="my-3">
+              <i class="IconList fa-solid fa-id-card-clip NotActive"></i
+              ><a href="#" class="NameList NotActive">portfolio</a>
+            </li>
+          </ul>
+        </div>
+        <section
+          class="SocialMedia d-flex flex-wrap justify-content-evenly my-4"
+        >
+          <span class="facebook">
+            <a
+              href="https://www.facebook.com/mohammed.khazaa"
+              class="LinkFace d-flex"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </span>
+          <span class="github">
+            <a href="https://github.com/mhmdkhaz" class="LinkGit d-flex">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </span>
+          <span class="linkedin">
+            <a href="" class="LinkLinked d-flex">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </span>
+          <span class="Gmail">
+            <a
+              href="https://mail.google.com/mail/u/0/?pli=1#inbox"
+              class="LinkGmail d-flex"
+            >
+              <i class="fa-solid fa-envelope-circle-check"></i>
+            </a>
+          </span>
+          <span class="whatsapp">
+            <a href="https://wa.me/+963957432443" class="LiknWtatsapp d-flex">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </span>
+        </section>
+      </div>
+      <div class="ContentAbout">
+        <span class="d-block d-lg-none" id="OpenSidebar"
+          ><i class="fa-solid fa-bars-staggered"></i
+        ></span>
+        <div class="container">
+          <div
+            class="ExplainAbout flex flex-column justify-content-center align-items-cente"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <h1 class="MainTitle">about me</h1>
+            <h2 class="MyJop">
+              i am mohammed khazaa and <span>web developer</span>
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              deserunt nam debitis, assumenda, eligendi doloribus exercitationem
+              pariatur iusto eius illo culpa! Impedit modi dolore rem, quos
+              recusandae aliquid odio delectus.
+            </p>
           </div>
-
-          <div class="col-md-10 col-sm-12 col-xl-10">
-            <span class="d-block d-lg-none" id="OpenSidebar"
-              ><i class="fa-solid fa-bars-staggered"></i
-            ></span>
-            <div class="container">
+          <!-- ---------------- start Information and skill ---------------- -->
+          <div class="InformationSkill">
+            <div class="row">
+              <!-- ---------------- start Information ---------------- -->
               <div
-                class="ExplainAbout flex flex-column justify-content-center align-items-cente"
+                class="col-lg-7 Information"
                 data-aos="fade-right"
                 data-aos-duration="1000"
               >
-                <h1 class="MainTitle">about me</h1>
-                <h2 class="MyJop">
-                  i am mohammed khazaa and <span>web developer</span>
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-                  deserunt nam debitis, assumenda, eligendi doloribus
-                  exercitationem pariatur iusto eius illo culpa! Impedit modi
-                  dolore rem, quos recusandae aliquid odio delectus.
-                </p>
-              </div>
-              <!-- ---------------- start Information and skill ---------------- -->
-              <div class="InformationSkill">
                 <div class="row">
-                  <!-- ---------------- start Information ---------------- -->
-                  <div
-                    class="col-lg-7 Information"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
-                    <div class="row">
-                      <div class="col-md-6">
-                        <h4>birthday : <span>7/7/2000</span></h4>
-                        <h4>website : <span>portfolio.com</span></h4>
-                        <h4>degree : <span>techincal (tcc)</span></h4>
-                        <h4>city : <span>damascus</span></h4>
-                      </div>
-                      <div class="col-md-6">
-                        <h4>age : <span>22</span></h4>
-                        <h4>email: <span>mhmdkh0957@gmail.com</span></h4>
-                        <h4>phone : <span>+963957432443</span></h4>
-                        <h4>freelancer : <span>availiabel</span></h4>
-                      </div>
-                      <div class="group-button d-flex flex-wnorap">
-                        <button type="button" class="btn ButtonStyle">
-                          Middle
-                        </button>
-                        <button type="button" class="btn ButtonStyle">
-                          Right
-                        </button>
-                      </div>
-                    </div>
+                  <div class="col-md-6">
+                    <h4>birthday : <span>7/7/2000</span></h4>
+                    <h4>degree : <span>techincal (tcc)</span></h4>
+                    <h4>city : <span>damascus</span></h4>
                   </div>
-                  <!-- ---------------- end Information ---------------- -->
-
-                  <!-- ---------------- start skill ---------------- -->
-                  <div class="col-lg-5 Skill">
-                    <div class="container-fluid">
-                      <div class="row">
-                        <div
-                          class="col-6 col-lg-4 d-flex justify-content-center"
-                        >
-                          <div
-                            class="progress-pie-chart"
-                            data-aos="zoom-in"
-                            data-percent="10"
-                          >
-                            <div class="ppc-progress">
-                              <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                              <div class="pcc-percents-wrapper">
-                                <span>%</span>
-                              </div>
-                            </div>
-                            <p>html</p>
-                          </div>
-                        </div>
-
-                        <div
-                          class="col-6 col-lg-4 d-flex justify-content-center"
-                        >
-                          <div
-                            class="progress-pie-chart"
-                            data-aos="zoom-in"
-                            data-percent="20"
-                          >
-                            <div class="ppc-progress">
-                              <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                              <div class="pcc-percents-wrapper">
-                                <span>%</span>
-                              </div>
-                            </div>
-                            <p>css</p>
-                          </div>
-                        </div>
-
-                        <div
-                          class="col-6 col-lg-4 d-flex justify-content-center"
-                        >
-                          <div
-                            class="progress-pie-chart"
-                            data-aos="zoom-in"
-                            data-percent="30"
-                          >
-                            <div class="ppc-progress">
-                              <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                              <div class="pcc-percents-wrapper">
-                                <span>%</span>
-                              </div>
-                            </div>
-                            <p>js</p>
-                          </div>
-                        </div>
-
-                        <div
-                          class="col-6 col-lg-4 d-flex justify-content-center"
-                        >
-                          <div
-                            class="progress-pie-chart"
-                            data-aos="zoom-in"
-                            data-percent="40"
-                          >
-                            <div class="ppc-progress">
-                              <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                              <div class="pcc-percents-wrapper">
-                                <span>%</span>
-                              </div>
-                            </div>
-                            <p>bootstrap 5</p>
-                          </div>
-                        </div>
-
-                        <div
-                          class="col-6 col-lg-4 d-flex justify-content-center"
-                        >
-                          <div
-                            class="progress-pie-chart"
-                            data-aos="zoom-in"
-                            data-percent="70"
-                          >
-                            <div class="ppc-progress">
-                              <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                              <div class="pcc-percents-wrapper">
-                                <span>%</span>
-                              </div>
-                            </div>
-                            <p>scss</p>
-                          </div>
-                        </div>
-
-                        <div
-                          class="col-6 col-lg-4 d-flex justify-content-center"
-                        >
-                          <div
-                            class="progress-pie-chart"
-                            data-aos="zoom-in"
-                            data-percent="90"
-                          >
-                            <div class="ppc-progress">
-                              <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                              <div class="pcc-percents-wrapper">
-                                <span>%</span>
-                              </div>
-                            </div>
-                            <p>git hub</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="col-md-6">
+                    <h4>country : <span>syria</span></h4>
+                    <h4>email: <span>mhmdkh0957@gmail.com</span></h4>
+                    <h4>phone : <span>+963957432443</span></h4>
                   </div>
-                  <!-- ---------------- end skill ---------------- -->
+                  <div class="group-button d-flex flex-wnorap">
+                    <button type="button" class="btn ButtonStyle">
+                      Middle
+                    </button>
+                    <button type="button" class="btn ButtonStyle">Right</button>
+                  </div>
                 </div>
               </div>
-              <!-- ---------------- end Information and skill ---------------- -->
+              <!-- ---------------- end Information ---------------- -->
 
-              <!-- ---------------- start in eduction expirence ------------------ -->
-              <div class="eduexp">
-                <div class="container">
+              <!-- ---------------- start skill ---------------- -->
+              <div class="col-lg-5 Skill">
+                <div class="container-fluid">
                   <div class="row">
-                    <div class="col-md-6" style="overflow: hidden">
-                      <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">eduction</div>
-                          <div class="swiper-slide">Slide 2</div>
-                          <div class="swiper-slide">Slide 3</div>
+                    <div class="col-6 col-lg-4 d-flex justify-content-center">
+                      <div
+                        class="progress-pie-chart"
+                        data-aos="zoom-in"
+                        data-percent="10"
+                      >
+                        <div class="ppc-progress">
+                          <div class="ppc-progress-fill"></div>
                         </div>
+                        <div class="ppc-percents">
+                          <div class="pcc-percents-wrapper">
+                            <span>%</span>
+                          </div>
+                        </div>
+                        <p>html</p>
                       </div>
                     </div>
-                    <div class="col-md-6" style="overflow: hidden">
-                      <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">expirence</div>
-                          <div class="swiper-slide">
-                            <p class="date">
-                              <i class="fa-solid fa-calendar"></i>
-                              <span>17/10/2019-17/11/2019</span>
-                            </p>
-                          </div>
-                          <div class="swiper-slide">Slide 3</div>
+
+                    <div class="col-6 col-lg-4 d-flex justify-content-center">
+                      <div
+                        class="progress-pie-chart"
+                        data-aos="zoom-in"
+                        data-percent="20"
+                      >
+                        <div class="ppc-progress">
+                          <div class="ppc-progress-fill"></div>
                         </div>
+                        <div class="ppc-percents">
+                          <div class="pcc-percents-wrapper">
+                            <span>%</span>
+                          </div>
+                        </div>
+                        <p>css</p>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-lg-4 d-flex justify-content-center">
+                      <div
+                        class="progress-pie-chart"
+                        data-aos="zoom-in"
+                        data-percent="30"
+                      >
+                        <div class="ppc-progress">
+                          <div class="ppc-progress-fill"></div>
+                        </div>
+                        <div class="ppc-percents">
+                          <div class="pcc-percents-wrapper">
+                            <span>%</span>
+                          </div>
+                        </div>
+                        <p>js</p>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-lg-4 d-flex justify-content-center">
+                      <div
+                        class="progress-pie-chart"
+                        data-aos="zoom-in"
+                        data-percent="40"
+                      >
+                        <div class="ppc-progress">
+                          <div class="ppc-progress-fill"></div>
+                        </div>
+                        <div class="ppc-percents">
+                          <div class="pcc-percents-wrapper">
+                            <span>%</span>
+                          </div>
+                        </div>
+                        <p>bootstrap 5</p>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-lg-4 d-flex justify-content-center">
+                      <div
+                        class="progress-pie-chart"
+                        data-aos="zoom-in"
+                        data-percent="70"
+                      >
+                        <div class="ppc-progress">
+                          <div class="ppc-progress-fill"></div>
+                        </div>
+                        <div class="ppc-percents">
+                          <div class="pcc-percents-wrapper">
+                            <span>%</span>
+                          </div>
+                        </div>
+                        <p>scss</p>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-lg-4 d-flex justify-content-center">
+                      <div
+                        class="progress-pie-chart"
+                        data-aos="zoom-in"
+                        data-percent="90"
+                      >
+                        <div class="ppc-progress">
+                          <div class="ppc-progress-fill"></div>
+                        </div>
+                        <div class="ppc-percents">
+                          <div class="pcc-percents-wrapper">
+                            <span>%</span>
+                          </div>
+                        </div>
+                        <p>git hub</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- ---------------- start in eduction expirence ------------------ -->
+              <!-- ---------------- end skill ---------------- -->
             </div>
           </div>
+          <!-- ---------------- end Information and skill ---------------- -->
         </div>
       </div>
     </div>
