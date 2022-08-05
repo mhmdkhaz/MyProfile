@@ -53,12 +53,17 @@ let SlideProfile = document.querySelector(".SlideProject");
 let CardSlideImg = document.querySelector(".card img");
 let TitleProject = document.getElementById("TitleProject");
 let CloseCard = document.querySelector(".CloseCard");
+let ButtonViewProject = document.querySelector(".LinkProject");
 
 // show card profilesSlides
 profilesSlides.forEach((profile, index) => {
   profile.addEventListener("click", () => {
     SlideProfile.style.transform = "scale(1)";
     TitleProject.textContent = profile.dataset.title;
+    // get and set data link
+    let GetDataLink = profile.dataset.link;
+    console.log(GetDataLink);
+    ButtonViewProject.setAttribute("href", GetDataLink);
   });
   // close card
   CloseCard.addEventListener("click", () => {
