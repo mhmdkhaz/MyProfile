@@ -1,5 +1,5 @@
 .sidebar {
-  transition: 0.5s;
+  transition: all 0.7s ease-in;
   position: fixed;
   top: 0;
   left: 0;
@@ -146,11 +146,10 @@
   }
 
   @media only screen and (max-width: $maxmeiumm) {
-    width: 0;
     height: 100%;
     overflow: hidden;
     z-index: 1;
     top: 0;
-    left: 0;
+    left: -200%;
   }
 }

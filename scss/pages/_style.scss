@@ -2,7 +2,6 @@
 
 // start in aside and content aside
 .content {
-  margin-left: 300px;
   position: relative;
   .ContentText {
     .MyName {
@@ -27,9 +26,6 @@
     }
   }
   .ImgMyself {
-    // @media only screen and (max-width: $widhtmobile) {
-    //   display: none;
-    // }
     .ContentImg {
       position: relative;
       width: 100%;

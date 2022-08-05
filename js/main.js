@@ -3,7 +3,7 @@ let Loading = document.getElementById("loading");
 window.onload = function LoadingIndex() {
   setTimeout(() => {
     Loading.style.display = "none";
-  }, 3000);
+  }, 2000);
 };
 
 // start in theme color and change color item
@@ -22,33 +22,35 @@ function SettingThemeColor() {
 
     color.onclick = () => {
       let getColor = color.getAttribute("data-color");
+      window.localStorage.setItem("SaveColor", getColor);
       document.body.classList.remove(...arr);
       document.body.classList.add(getColor);
     };
+    if (window.localStorage.getItem("SaveColor")) {
+      document.body.classList.add(window.localStorage.getItem("SaveColor"));
+    }
   });
 }
 SettingThemeColor();
 
-// open and close sidebar
-let OpenSide = document.querySelector("#OpenSidebar");
-let CloseSide = document.querySelector("#CloseSidebar");
-let Sidebar = document.querySelector(".sidebar");
+  // open and close sidebar
+  let OpenSide = document.querySelector("#OpenSidebar");
+  let CloseSide = document.querySelector("#CloseSidebar");
+  let Sidebar = document.querySelector(".sidebar");
 
-let Lists = document.querySelectorAll(".list-group li");
-let NameList = document.querySelector(".NameList");
-let IconList = document.querySelector(".IconList");
+  let Lists = document.querySelectorAll(".list-group li");
+  let NameList = document.querySelector(".NameList");
+  let IconList = document.querySelector(".IconList");
 
-function ChangeColorCloseOpenSidebar() {
-  OpenSide.onclick = () => {
-    Sidebar.style.width = "80%";
-    Sidebar.style.height = "100%";
-  };
-  CloseSide.onclick = () => {
-    Sidebar.style.width = "0";
-    // Sidebar.style.height = "0";
-  };
-}
-ChangeColorCloseOpenSidebar();
+  function ChangeColorCloseOpenSidebar() {
+    OpenSide.onclick = () => {
+      Sidebar.style.left = "0";
+    };
+    CloseSide.onclick = () => {
+      Sidebar.style.left = "-100%";
+    };
+  }
+  ChangeColorCloseOpenSidebar();
 
 // auto write and remove text
 
@@ -113,8 +115,3 @@ window.onscroll = function Progress() {
     }
   }
 };
-// start in swiper js
-// let swiper = new Swiper(".mySwiper", {
-//   effect: "cards",
-//   grabCursor: true,
-// });

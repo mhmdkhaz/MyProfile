@@ -2,12 +2,10 @@
 // ------------------- start in about me -------------------
 .mySidenav {
   .ContentAbout {
-    margin-left: 300px;
     @media only screen and (max-width: $widhtmedium) {
       margin-left: 0;
     }
     .ExplainAbout {
-      margin-top: 100px;
       .MyJop {
         //   @extend .TextWeb;
       }

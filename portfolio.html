@@ -12,15 +12,10 @@
       rel="stylesheet"
       href="node_modules/@fortawesome/fontawesome-free/css/all.css"
     />
+    <!-- start in aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="colorOne">
-    <!-- -------------------- start in loading --------------------  -->
-    <div class="loading" id="loading">
-      <h1>loading</h1>
-      <div class="loader"></div>
-    </div>
-    <!-- -------------------- end in loading --------------------  -->
-
     <!-- -------------------- start in theme color --------------------  -->
     <div class="setting d-flex flex-row justify-content-center">
       <div class="ContentIconColor container d-flex justify-content-end">
@@ -58,7 +53,7 @@
     </div>
     <!--end in theme color  -->
     <!-- start mainc sidebar -->
-    <div class="mySidenav" style="height: 100vh">
+    <div class="mySidenav">
       <div class="sidebar">
         <span class="d-block d-lg-none" id="CloseSidebar"
           ><i class="fa-solid fa-xmark"></i
@@ -69,16 +64,16 @@
         <div class="list d-flex justify-content-center">
           <ul class="list-group">
             <li class="my-3">
-              <i class="IconList fa-solid fa-house ActiveColor"></i
-              ><a href="#" class="NameList ActiveColor">home</a>
+              <i class="IconList fa-solid fa-house NotActive"></i
+              ><a href="index.html" class="NameList NotActive">home</a>
             </li>
             <li class="my-3">
               <i class="IconList fa-solid fa-user NotActive"></i
               ><a href="about.html" class="NameList NotActive">about</a>
             </li>
             <li class="my-3">
-              <i class="IconList fa-solid fa-id-card-clip NotActive"></i
-              ><a href="portfolio.html" class="NameList NotActive">portfolio</a>
+              <i class="IconList fa-solid fa-id-card-clip ActiveColor"></i
+              ><a href="#" class="NameList ActiveColor">portfolio</a>
             </li>
           </ul>
         </div>
@@ -118,47 +113,67 @@
           </span>
         </section>
       </div>
-
-      <div class="content MargingLeftElemetn">
+      <div class="MargingLeftElemetn">
         <span class="d-block d-lg-none" id="OpenSidebar"
           ><i class="fa-solid fa-bars-staggered"></i
         ></span>
-        <div class="container d-flex">
-          <div class="row">
-            <div
-              class="col-md-7 d-flex align-items-center"
-              style="height: 100vh"
-              data-aos="fade-right"
-              data-aos-duration="500"
-            >
-              <div class="ContentText">
-                <h2 class="MyName">
-                  hello my name is <span>mohammed khazaa</span>
-                </h2>
-                <h2 class="TextWeb">I am a <span class="AutoWrite"></span></h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Perspiciatis tenetur libero, neque quia amet earum dignissimos
-                  doloremque mollitia optio officiis.
-                </p>
-                <a href="about.html"
-                  ><button class="btn about ButtonStyle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Read More
-                  </button></a
-                >
+        <div class="container">
+          <div class="profileprojectes">
+            <div class="row">
+              <div
+                class="profileproject col-md-4 col-lg-12"
+                data-aos="zoom-in"
+                data-title="chain"
+                data-link=""
+              >
+                <img src="images/Profile-1.png" alt="" />
+              </div>
+              <div
+                class="profileproject col-md-4 col-lg-12"
+                data-aos="zoom-in"
+                data-title="chain"
+                data-link=""
+              >
+                <img src="images/2.jpg" alt="" />
+              </div>
+              <div
+                class="profileproject col-md-4 col-lg-12"
+                data-aos="zoom-in"
+                data-title="chain"
+                data-link=""
+              >
+                <img src="images/3.jpg" alt="" />
+              </div>
+              <div
+                class="profileproject col-md-4 col-lg-12"
+                data-aos="zoom-in"
+                data-title="chain"
+                data-link=""
+              >
+                <img src="images/3.jpg" alt="" />
               </div>
             </div>
-            <div
-              class="ImgMyself col-md-5 col-sm-12 d-none d-lg-flex flex-column justify-content-center align-items-center"
-              data-aos="fade-left"
-              data-aos-duration="500"
-            >
-              <div class="ContentImg d-flex justify-content-center">
-                <img src="images/MyPhoteProfile.jpg" alt="" />
+            <div class="SlideProject">
+              <div class="shadow"></div>
+              <div class="card">
+                <img src="" alt="" />
+                <div
+                  class="InformationProject d-flex flex-column justify-content-center align-items-center"
+                >
+                  <h2 class="TitleProject" id="TitleProject"></h2>
+                  <a href="">
+                    <button class="btn ViewProject">view</button>
+                  </a>
+                </div>
+                <div id="nav-button--prev" class="slider__nav-button">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div id="nav-button--next" class="slider__nav-button">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="CloseCard">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -178,7 +193,12 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <!-- start in aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- start js -->
-    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
   </body>
 </html>

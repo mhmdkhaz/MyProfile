@@ -10105,7 +10105,6 @@ textarea.form-control-lg {
   }
 }
 .content {
-  margin-left: 300px;
   position: relative;
   display: flex;
 }
@@ -10124,7 +10123,7 @@ textarea.form-control-lg {
 .content .ContentText p {
   font-size: 1.2rem;
   letter-spacing: 2px;
-  color: #302e70;
+  color: rgb(48, 46, 112);
 }
 @media only screen and (max-width: 720px) {
   .content .ContentText {
@@ -10174,21 +10173,15 @@ textarea.form-control-lg {
   }
 }
 
-.mySidenav .ContentAbout {
-  margin-left: 300px;
-}
 @media only screen and (max-width: 970px) {
   .mySidenav .ContentAbout {
     margin-left: 0;
   }
 }
-.mySidenav .ContentAbout .ExplainAbout {
-  margin-top: 100px;
-}
 .mySidenav .ContentAbout .ExplainAbout p {
   font-size: 1.2rem;
   letter-spacing: 2px;
-  color: #302e70;
+  color: rgb(48, 46, 112);
 }
 .mySidenav .ContentAbout .InformationSkill {
   margin-top: 40px;
@@ -10200,7 +10193,7 @@ textarea.form-control-lg {
   display: flex;
   flex-wrap: wrap;
   font-weight: 800;
-  color: #302e70;
+  color: rgb(48, 46, 112);
   border-bottom: 1px solid #504e70;
   padding: 12px 0;
   text-transform: capitalize;
@@ -10217,6 +10210,112 @@ textarea.form-control-lg {
 .mySidenav .ContentAbout .InformationSkill .Information .group-button button {
   margin-left: 10px;
 }
+.profileprojectes .profileproject {
+  box-shadow: rgba(48, 46, 112, 0.2) 0px 2px 1px, rgba(48, 46, 112, 0.2) 0px 4px 2px, rgba(48, 46, 112, 0.2) 0px 8px 4px, rgba(48, 46, 112, 0.2) 0px 16px 8px, rgba(48, 46, 112, 0.2) 0px 32px 16px;
+  width: 380px;
+  background-color: red;
+  height: 370px;
+  margin: 40px 0 40px 20px;
+  padding: 0;
+  outline: 4px solid rgb(48, 46, 112);
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.profileprojectes .profileproject:hover {
+  transform: translateY(-10px);
+}
+@media only screen and (max-width: 992px) {
+  .profileprojectes .profileproject {
+    margin: 100px 0 0 0;
+  }
+}
+.profileprojectes .profileproject img {
+  width: 100%;
+  height: 100%;
+}
+.profileprojectes .SlideProject {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+}
+.profileprojectes .SlideProject .shadow {
+  position: fixed;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+.profileprojectes .SlideProject .card {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  border-radius: 5px;
+}
+.profileprojectes .SlideProject .card img {
+  width: 100%;
+  height: 80%;
+}
+.profileprojectes .SlideProject .card .slider__nav-button {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+.profileprojectes .SlideProject .card .slider__nav-button i {
+  font-size: 2rem;
+  color: #504e70;
+}
+.profileprojectes .SlideProject .card #nav-button--prev {
+  left: 0;
+}
+.profileprojectes .SlideProject .card #nav-button--next {
+  right: 0;
+}
+.profileprojectes .SlideProject .card .CloseCard {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.profileprojectes .SlideProject .card .CloseCard i {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.profileprojectes .SlideProject .card .InformationProject .TitleProject {
+  text-align: center;
+  font-size: 2rem;
+  color: #504e70;
+}
+.profileprojectes .SlideProject .card .InformationProject .ViewProject {
+  border: 2px solid #504e70;
+  position: relative;
+  color: #504e70;
+  z-index: 1;
+  width: 100px;
+}
+.profileprojectes .SlideProject .card .InformationProject .ViewProject::before {
+  content: "";
+  background-color: #504e70;
+  width: 0;
+  transition: all 0.3s;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.profileprojectes .SlideProject .card .InformationProject .ViewProject:hover {
+  color: #fff;
+}
+.profileprojectes .SlideProject .card .InformationProject .ViewProject:hover::before {
+  width: 100%;
+}
+
 .ButtonStyle {
   border-radius: 20px;
   background-color: #ec1839;
@@ -10236,6 +10335,7 @@ textarea.form-control-lg {
   top: 10px;
   left: 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 #OpenSidebar i {
   border-radius: 5px;
@@ -10249,6 +10349,7 @@ textarea.form-control-lg {
   top: 0;
   right: 0;
   z-index: 2;
+  cursor: pointer;
 }
 #CloseSidebar i {
   border-radius: 5px;
@@ -10259,7 +10360,7 @@ textarea.form-control-lg {
 
 .MainTitle {
   text-transform: capitalize;
-  color: #302e70;
+  color: rgb(48, 46, 112);
   position: relative;
   margin-bottom: 40px;
 }
@@ -10300,7 +10401,7 @@ textarea.form-control-lg {
   text-align: center;
   width: 100%;
   text-transform: capitalize;
-  color: #302e70;
+  color: rgb(48, 46, 112);
   font-weight: bold;
   margin-top: 5px;
 }
@@ -10352,7 +10453,7 @@ textarea.form-control-lg {
   display: block;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #302e70;
+  color: rgb(48, 46, 112);
 }
 
 .pcc-percents-wrapper {
@@ -10378,7 +10479,7 @@ textarea.form-control-lg {
   z-index: 2;
   font-size: 2.5rem;
   font-weight: 800;
-  color: #302e70;
+  color: rgb(48, 46, 112);
   font-family: "Clicker Script", cursive;
 }
 .loading .loader {
@@ -10423,36 +10524,8 @@ textarea.form-control-lg {
   filter: blur(20px);
 }
 
-.swiper {
-  width: 80%;
-  height: 320px;
-  margin-bottom: 40px;
-  overflow: hidden;
-}
-.swiper .swiper-slide {
-  border-radius: 20px;
-  border: 1px solid #ec1839;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  background-color: #fdf9ff;
-  padding: 12px;
-}
-.swiper .swiper-slide .date {
-  margin-left: 40px -10px;
-}
-.swiper .swiper-slide:nth-child(1) {
-  font-size: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 800;
-  letter-spacing: 0.2rem;
-  text-transform: capitalize;
-  text-shadow: -2px -2px 0px #504e70, 4px 4px 0px #504e70, 7px 7px 0px #504e70;
-}
-
 .sidebar {
-  transition: 0.5s;
+  transition: all 0.7s ease-in;
   position: fixed;
   top: 0;
   left: 0;
@@ -10463,7 +10536,7 @@ textarea.form-control-lg {
 .sidebar .TextName .name {
   position: relative;
   font-size: 1.2rem;
-  color: #302e70;
+  color: rgb(48, 46, 112);
   margin: 20px auto;
   font-size: 30px;
 }
@@ -10496,7 +10569,7 @@ textarea.form-control-lg {
   position: relative;
   padding: 10px 15px;
   list-style: none;
-  border-bottom: 1px solid #302e70;
+  border-bottom: 1px solid rgb(48, 46, 112);
   overflow: hidden;
   transition: all 0.1s linear;
 }
@@ -10586,12 +10659,11 @@ textarea.form-control-lg {
 }
 @media only screen and (max-width: 992px) {
   .sidebar {
-    width: 0;
     height: 100%;
     overflow: hidden;
     z-index: 1;
     top: 0;
-    left: 0;
+    left: -200%;
   }
 }
 
@@ -10783,7 +10855,7 @@ textarea.form-control-lg {
   border: 1px solid #fa5b0f;
 }
 .colorTow .ActiveColor {
-  color: #37b182;
+  color: #fa5b0f;
 }
 
 .colorThree .ContentText h2 span {
@@ -10929,7 +11001,20 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #302e70;
+  background: rgb(48, 46, 112);
+}
+
+.MargingLeftElemetn {
+  margin-left: 300px;
+}
+@media only screen and (max-width: 970px) {
+  .MargingLeftElemetn {
+    margin-left: 0;
+  }
+}
+
+.MargingTopElemetn {
+  margin-top: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@
   top: 10px;
   left: 10px;
   border-radius: $bRadiusTow;
+  cursor: pointer;
   i {
     border-radius: $bRadiusTow;
     padding: 8px;
@@ -16,6 +17,7 @@
   top: 0;
   right: 0;
   z-index: 2;
+  cursor: pointer;
   i {
     border-radius: $bRadiusTow;
     padding: 8px;
