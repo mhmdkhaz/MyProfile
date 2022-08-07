@@ -56,25 +56,21 @@ let CloseCard = document.querySelector(".CloseCard");
 let ButtonViewProject = document.querySelector(".LinkProject");
 
 // show card profilesSlides
-profilesSlides.forEach((profile, index) => {
+profilesSlides.forEach((profile) => {
   profile.addEventListener("click", () => {
     SlideProfile.style.transform = "scale(1)";
     TitleProject.textContent = profile.dataset.title;
+    // set img src in card
+    ProfileImages.forEach((ProfileImg) => {
+      let GetSrc = ProfileImg.getAttribute("src");
+      CardSlideImg.setAttribute("src", GetSrc);
+    });
     // get and set data link
     let GetDataLink = profile.dataset.link;
-    console.log(GetDataLink);
     ButtonViewProject.setAttribute("href", GetDataLink);
   });
   // close card
   CloseCard.addEventListener("click", () => {
     SlideProfile.style.transform = "scale(0)";
-  });
-});
-
-// set src in card
-ProfileImages.forEach((ProfileImg) => {
-  ProfileImg.addEventListener("click", () => {
-    let GetSrc = ProfileImg.getAttribute("src");
-    CardSlideImg.setAttribute("src", GetSrc);
   });
 });

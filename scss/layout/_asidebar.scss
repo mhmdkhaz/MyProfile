@@ -144,6 +144,11 @@
       }
     }
   }
+  .cv {
+    text-transform: uppercase;
+    border: 2px solid $text-black-700;
+    color: $text-black-700;
+  }
 
   @media only screen and (max-width: $maxmeiumm) {
     height: 100%;

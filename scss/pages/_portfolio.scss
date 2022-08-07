@@ -1,106 +1,114 @@
-.profileprojectes {
-  .profileproject {
-    box-shadow: rgb(48, 46, 112, 0.2) 0px 2px 1px,
-      rgb(48, 46, 112, 0.2) 0px 4px 2px, rgb(48, 46, 112, 0.2) 0px 8px 4px,
-      rgb(48, 46, 112, 0.2) 0px 16px 8px, rgb(48, 46, 112, 0.2) 0px 32px 16px;
-    width: 380px;
-    background-color: red;
-    height: 370px;
-    margin: $margintp 0 $margintp 20px;
-    padding: 0;
-    outline: 4px solid $text-black-900;
-    transition: all 0.2s linear;
-    cursor: pointer;
-    &:hover {
-      transform: translateY(-10px);
-    }
-    @media only screen and (max-width: $maxmeiumm) {
-      margin: 100px 0 0 0;
-    }
+.profileproject {
+  box-shadow: rgb(48, 46, 112) 0 0 10px, rgb(48, 46, 112) 0 0 10px,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  width: 100%;
+  height: 370px;
+  margin: $margintp 0 0 0px;
+  padding: 0;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-5px);
+  }
+  @media only screen and (max-width: $minmobile) {
+    margin: 100px 0 0 0;
+    width: 80vw;
+  }
+  .ContentImg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 85%;
+    background-color: $bg-black-100;
+    overflow: hidden;
     img {
-      width: 100%;
-      height: 100%;
+      margin: 5px 0 0 5px;
+      width: 40%;
+      height: 80%;
     }
   }
-  .SlideProject {
+  h4 {
+    margin: 10px 0 0 10px;
+    text-transform: capitalize;
+  }
+}
+
+.SlideProject {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  .shadow {
     position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0);
-    transition: all 0.3s;
+    background-color: #000;
     width: 100%;
     height: 100%;
-    .shadow {
-      position: fixed;
-      background-color: #000;
+    opacity: 0.4;
+  }
+  .card {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    border-radius: $bRadiusTow;
+    img {
       width: 100%;
-      height: 100%;
-      opacity: 0.4;
+      height: 80%;
     }
-    .card {
-      width: 400px;
-      height: 500px;
-      position: relative;
-      border-radius: $bRadiusTow;
-      img {
-        width: 100%;
-        height: 80%;
+    .slider__nav-button {
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      i {
+        font-size: $sizeH;
+        color: $text-black-700;
       }
-      .slider__nav-button {
-        position: absolute;
-        top: 50%;
+    }
+    #nav-button--prev {
+      left: 0;
+    }
+    #nav-button--next {
+      right: 0;
+    }
+    .CloseCard {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      i {
+        font-size: $sizeP;
         cursor: pointer;
-        i {
-          font-size: $sizeH;
-          color: $text-black-700;
+      }
+    }
+    .InformationProject {
+      .TitleProject {
+        text-align: center;
+        font-size: $sizeH;
+        color: $text-black-700;
+      }
+      .ViewProject {
+        border: 2px solid $text-black-700;
+        position: relative;
+        color: $text-black-700;
+        z-index: 1;
+        width: 100px;
+        &::before {
+          content: "";
+          background-color: $text-black-700;
+          width: 0;
+          transition: all 0.3s;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
         }
-      }
-      #nav-button--prev {
-        left: 0;
-      }
-      #nav-button--next {
-        right: 0;
-      }
-      .CloseCard {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        i {
-          font-size: $sizeP;
-          cursor: pointer;
-        }
-      }
-      .InformationProject {
-        .TitleProject {
-          text-align: center;
-          font-size: $sizeH;
-          color: $text-black-700;
-        }
-        .ViewProject {
-          border: 2px solid $text-black-700;
-          position: relative;
-          color: $text-black-700;
-          z-index: 1;
-          width: 100px;
+        &:hover {
+          color: #fff;
           &::before {
-            content: "";
-            background-color: $text-black-700;
-            width: 0;
-            transition: all 0.3s;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: -1;
-          }
-          &:hover {
-            color: #fff;
-            &::before {
-              width: 100%;
-            }
+            width: 100%;
           }
         }
       }

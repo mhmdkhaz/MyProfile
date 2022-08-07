@@ -3,7 +3,7 @@ let Loading = document.getElementById("loading");
 window.onload = function LoadingIndex() {
   setTimeout(() => {
     Loading.style.display = "none";
-  }, 2000);
+  }, 000);
 };
 
 // start in theme color and change color item
@@ -33,24 +33,24 @@ function SettingThemeColor() {
 }
 SettingThemeColor();
 
-  // open and close sidebar
-  let OpenSide = document.querySelector("#OpenSidebar");
-  let CloseSide = document.querySelector("#CloseSidebar");
-  let Sidebar = document.querySelector(".sidebar");
+// open and close sidebar
+let OpenSide = document.querySelector("#OpenSidebar");
+let CloseSide = document.querySelector("#CloseSidebar");
+let Sidebar = document.querySelector(".sidebar");
 
-  let Lists = document.querySelectorAll(".list-group li");
-  let NameList = document.querySelector(".NameList");
-  let IconList = document.querySelector(".IconList");
+let Lists = document.querySelectorAll(".list-group li");
+let NameList = document.querySelector(".NameList");
+let IconList = document.querySelector(".IconList");
 
-  function ChangeColorCloseOpenSidebar() {
-    OpenSide.onclick = () => {
-      Sidebar.style.left = "0";
-    };
-    CloseSide.onclick = () => {
-      Sidebar.style.left = "-100%";
-    };
-  }
-  ChangeColorCloseOpenSidebar();
+function ChangeColorCloseOpenSidebar() {
+  OpenSide.onclick = () => {
+    Sidebar.style.left = "0";
+  };
+  CloseSide.onclick = () => {
+    Sidebar.style.left = "-100%";
+  };
+}
+ChangeColorCloseOpenSidebar();
 
 // auto write and remove text
 

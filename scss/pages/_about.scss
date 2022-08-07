@@ -18,17 +18,16 @@
       .Information {
         margin-bottom: $margintp;
         h4 {
-          // font-size: 1.2rem;
-          display: flex;
-          flex-wrap: wrap;
+          flex-wrap: nowrap;
           font-weight: 800;
           color: $text-black-900;
           border-bottom: 1px solid $text-black-700;
           padding: $padingtp 0;
           text-transform: capitalize;
+          font-size: 1.2rem;
           span {
             font-weight: 500;
-            font-size: $sizeP;
+            font-size: 1.1rem;
             color: $text-black-700;
           }
         }

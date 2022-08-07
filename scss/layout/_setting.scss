@@ -28,14 +28,19 @@
       }
     }
     .AllColor {
-      opacity: 0;
+      width: 40vh;
+      background-color: $bg-black-100;
+      padding: $padingtp $padinglr - 20px;
+      transition: all 0.5s;
+      border-radius: 5px;
     }
     .content-color {
-      width: 40vh;
-      transition: 0.2s;
-      background-color: $bg-black-100;
-      border-radius: 5px;
-      padding: $padingtp $padinglr - 20px;
+      // width: 0vh;
+      // background-color: $bg-black-100;
+      // padding: $padingtp $padinglr - 20px;
+      // transition: all 0.5s;
+      // border-radius: 5px;
+
       .textTheme {
         h3 {
           display: block;

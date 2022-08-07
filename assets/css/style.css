@@ -10190,17 +10190,17 @@ textarea.form-control-lg {
   margin-bottom: 40px;
 }
 .mySidenav .ContentAbout .InformationSkill .Information h4 {
-  display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   font-weight: 800;
   color: rgb(48, 46, 112);
   border-bottom: 1px solid #504e70;
   padding: 12px 0;
   text-transform: capitalize;
+  font-size: 1.2rem;
 }
 .mySidenav .ContentAbout .InformationSkill .Information h4 span {
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #504e70;
 }
 .mySidenav .ContentAbout .InformationSkill .Information .group-button {
@@ -10210,95 +10210,106 @@ textarea.form-control-lg {
 .mySidenav .ContentAbout .InformationSkill .Information .group-button button {
   margin-left: 10px;
 }
-.profileprojectes .profileproject {
-  box-shadow: rgba(48, 46, 112, 0.2) 0px 2px 1px, rgba(48, 46, 112, 0.2) 0px 4px 2px, rgba(48, 46, 112, 0.2) 0px 8px 4px, rgba(48, 46, 112, 0.2) 0px 16px 8px, rgba(48, 46, 112, 0.2) 0px 32px 16px;
-  width: 380px;
-  background-color: red;
+.profileproject {
+  box-shadow: rgb(48, 46, 112) 0 0 10px, rgb(48, 46, 112) 0 0 10px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  width: 100%;
   height: 370px;
-  margin: 40px 0 40px 20px;
+  margin: 40px 0 0 0px;
   padding: 0;
-  outline: 4px solid rgb(48, 46, 112);
   transition: all 0.2s linear;
   cursor: pointer;
 }
-.profileprojectes .profileproject:hover {
-  transform: translateY(-10px);
+.profileproject:hover {
+  transform: translateY(-5px);
 }
-@media only screen and (max-width: 992px) {
-  .profileprojectes .profileproject {
+@media only screen and (max-width: 768px) {
+  .profileproject {
     margin: 100px 0 0 0;
+    width: 80vw;
   }
 }
-.profileprojectes .profileproject img {
+.profileproject .ContentImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 85%;
+  background-color: #fdf9ff;
+  overflow: hidden;
 }
-.profileprojectes .SlideProject {
+.profileproject .ContentImg img {
+  margin: 5px 0 0 5px;
+  width: 40%;
+  height: 80%;
+}
+.profileproject h4 {
+  margin: 10px 0 0 10px;
+  text-transform: capitalize;
+}
+
+.SlideProject {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transform: scale(0);
   transition: all 0.3s;
   width: 100%;
   height: 100%;
 }
-.profileprojectes .SlideProject .shadow {
+.SlideProject .shadow {
   position: fixed;
   background-color: #000;
   width: 100%;
   height: 100%;
   opacity: 0.4;
 }
-.profileprojectes .SlideProject .card {
+.SlideProject .card {
   width: 400px;
   height: 500px;
   position: relative;
   border-radius: 5px;
 }
-.profileprojectes .SlideProject .card img {
+.SlideProject .card img {
   width: 100%;
   height: 80%;
 }
-.profileprojectes .SlideProject .card .slider__nav-button {
+.SlideProject .card .slider__nav-button {
   position: absolute;
   top: 50%;
   cursor: pointer;
 }
-.profileprojectes .SlideProject .card .slider__nav-button i {
+.SlideProject .card .slider__nav-button i {
   font-size: 2rem;
   color: #504e70;
 }
-.profileprojectes .SlideProject .card #nav-button--prev {
+.SlideProject .card #nav-button--prev {
   left: 0;
 }
-.profileprojectes .SlideProject .card #nav-button--next {
+.SlideProject .card #nav-button--next {
   right: 0;
 }
-.profileprojectes .SlideProject .card .CloseCard {
+.SlideProject .card .CloseCard {
   position: absolute;
   top: 10px;
   right: 10px;
 }
-.profileprojectes .SlideProject .card .CloseCard i {
+.SlideProject .card .CloseCard i {
   font-size: 1.2rem;
   cursor: pointer;
 }
-.profileprojectes .SlideProject .card .InformationProject .TitleProject {
+.SlideProject .card .InformationProject .TitleProject {
   text-align: center;
   font-size: 2rem;
   color: #504e70;
 }
-.profileprojectes .SlideProject .card .InformationProject .ViewProject {
+.SlideProject .card .InformationProject .ViewProject {
   border: 2px solid #504e70;
   position: relative;
   color: #504e70;
   z-index: 1;
   width: 100px;
 }
-.profileprojectes .SlideProject .card .InformationProject .ViewProject::before {
+.SlideProject .card .InformationProject .ViewProject::before {
   content: "";
   background-color: #504e70;
   width: 0;
@@ -10309,10 +10320,10 @@ textarea.form-control-lg {
   top: 0;
   z-index: -1;
 }
-.profileprojectes .SlideProject .card .InformationProject .ViewProject:hover {
+.SlideProject .card .InformationProject .ViewProject:hover {
   color: #fff;
 }
-.profileprojectes .SlideProject .card .InformationProject .ViewProject:hover::before {
+.SlideProject .card .InformationProject .ViewProject:hover::before {
   width: 100%;
 }
 
@@ -10657,6 +10668,11 @@ textarea.form-control-lg {
   text-shadow: 0 0 15px #4dc247;
   transition: all 0.5s ease;
 }
+.sidebar .cv {
+  text-transform: uppercase;
+  border: 2px solid #504e70;
+  color: #504e70;
+}
 @media only screen and (max-width: 992px) {
   .sidebar {
     height: 100%;
@@ -10716,14 +10732,11 @@ textarea.form-control-lg {
   }
 }
 .setting .ContentIconColor .AllColor {
-  opacity: 0;
-}
-.setting .ContentIconColor .content-color {
   width: 40vh;
-  transition: 0.2s;
   background-color: #fdf9ff;
-  border-radius: 5px;
   padding: 12px 15px;
+  transition: all 0.5s;
+  border-radius: 5px;
 }
 .setting .ContentIconColor .content-color .textTheme h3 {
   display: block;
