@@ -10672,6 +10672,11 @@ textarea.form-control-lg {
   text-transform: uppercase;
   border: 2px solid #504e70;
   color: #504e70;
+  transition: all 0.3s ease;
+}
+.sidebar .cv:hover {
+  box-shadow: 0 0 8px #504e70;
+  margin-top: -2px;
 }
 @media only screen and (max-width: 992px) {
   .sidebar {
