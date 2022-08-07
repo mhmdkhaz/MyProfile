@@ -4,7 +4,7 @@
   "description": "",
   "main": "\u001b[A\u001b[B",
   "scripts": {
-    "Compile:sass": "sass --watch scss:assets/css"
+    " ": "sass --watch scss:assets/css"
   },
   "author": "",
   "license": "ISC",
