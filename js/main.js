@@ -3,7 +3,7 @@ let Loading = document.getElementById("loading");
 window.onload = function LoadingIndex() {
   setTimeout(() => {
     Loading.style.display = "none";
-  }, 000);
+  }, 3000);
 };
 
 // start in theme color and change color item
