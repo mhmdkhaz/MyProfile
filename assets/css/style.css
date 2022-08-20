@@ -10238,9 +10238,8 @@ textarea.form-control-lg {
   overflow: hidden;
 }
 .profileproject .ContentImg img {
-  margin: 5px 0 0 5px;
-  width: 40%;
-  height: 80%;
+  margin: 15px 0 0 5px;
+  height: 90%;
 }
 .profileproject h4 {
   margin: 10px 0 0 10px;
@@ -10265,13 +10264,13 @@ textarea.form-control-lg {
 }
 .SlideProject .card {
   width: 400px;
-  height: 500px;
+  height: 95%;
+  overflow: hidden;
   position: relative;
   border-radius: 5px;
 }
 .SlideProject .card img {
   width: 100%;
-  height: 80%;
 }
 .SlideProject .card .slider__nav-button {
   position: absolute;

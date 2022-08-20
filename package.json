@@ -4,7 +4,7 @@
   "description": "",
   "main": "\u001b[A\u001b[B",
   "scripts": {
-    " ": "sass --watch scss:assets/css"
+    "cmomiler": "sass --watch scss:assets/css"
   },
   "author": "",
   "license": "ISC",

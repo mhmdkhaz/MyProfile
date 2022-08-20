@@ -48,7 +48,9 @@ ChangeColorCloseOpenSidebar();
 let profilesSlides = document.querySelectorAll(
   ".profileprojectes .profileproject"
 );
-let ProfileImages = document.querySelectorAll(".profileproject img");
+let ProfileImages = document.querySelectorAll(
+  ".profileproject .ContentImg img"
+);
 let SlideProfile = document.querySelector(".SlideProject");
 let CardSlideImg = document.querySelector(".card img");
 let TitleProject = document.getElementById("TitleProject");
@@ -61,10 +63,10 @@ profilesSlides.forEach((profile) => {
     SlideProfile.style.transform = "scale(1)";
     TitleProject.textContent = profile.dataset.title;
     // set img src in card
-    ProfileImages.forEach((ProfileImg) => {
-      let GetSrc = ProfileImg.getAttribute("src");
-      CardSlideImg.setAttribute("src", GetSrc);
-    });
+    let GetImg = profile.getElementsByTagName("img");
+    let GetSrc = GetImg[0].getAttribute("src");
+    CardSlideImg.setAttribute("src", GetSrc);
+
     // get and set data link
     let GetDataLink = profile.dataset.link;
     ButtonViewProject.setAttribute("href", GetDataLink);
